@@ -1,0 +1,965 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls   s/call   s/call  name    
+ 14.30      3.44     3.44 3514430592     0.00     0.00  rotr(unsigned int, unsigned int)
+  9.66      5.76     2.33  6101442     0.00     0.00  sha256_transform(unsigned char const*, unsigned int*)
+  5.69      7.13     1.37 347782194     0.00     0.00  unsigned char& std::vector<unsigned char, std::allocator<unsigned char> >::emplace_back<unsigned char>(unsigned char&&)
+  3.49      7.97     0.84 939622090     0.00     0.00  __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >::__normal_iterator(unsigned char* const&)
+  3.41      8.79     0.82 390492288     0.00     0.00  ch(unsigned int, unsigned int, unsigned int)
+  2.74      9.46     0.66 1067752350     0.00     0.00  unsigned char&& std::forward<unsigned char>(std::remove_reference<unsigned char>::type&)
+  2.70     10.11     0.65 445405249     0.00     0.00  std::vector<unsigned char, std::allocator<unsigned char> >::back()
+  2.70     10.76     0.65 390492288     0.00     0.00  ep0(unsigned int)
+  2.66     11.39     0.64        2     0.32     9.79  sha256_stream_crypt(std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> >&, std::vector<unsigned char, std::allocator<unsigned char> > const&, unsigned long)
+  2.64     12.03     0.64 585738334     0.00     0.00  std::char_traits<char>::eq_int_type(int const&, int const&)
+  2.49     12.63     0.60 585738334     0.00     0.00  std::istreambuf_iterator<char, std::char_traits<char> >::_S_is_eof(int)
+  2.37     13.20     0.57 445405249     0.00     0.00  __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >::operator-(long) const
+  2.37     13.77     0.57 390492288     0.00     0.00  ep1(unsigned int)
+  2.33     14.33     0.56 292869216     0.00     0.00  sig0(unsigned int)
+  2.29     14.88     0.55 292869216     0.00     0.00  sig1(unsigned int)
+  2.14     15.39     0.52 292869167     0.00     0.00  std::istreambuf_iterator<char, std::char_traits<char> >::_M_get() const
+  2.10     15.90     0.51 469811045     0.00     0.00  std::vector<unsigned char, std::allocator<unsigned char> >::end()
+  2.00     16.38     0.48 97623055     0.00     0.00  unsigned char& std::vector<unsigned char, std::allocator<unsigned char> >::emplace_back<char>(char&&)
+  1.91     16.84     0.46 524724112     0.00     0.00  std::vector<unsigned char, std::allocator<unsigned char> >::size() const
+  1.89     17.30     0.46  6101442     0.00     0.00  sha256(std::vector<unsigned char, std::allocator<unsigned char> > const&)
+  1.83     17.73     0.44 347782194     0.00     0.00  std::vector<unsigned char, std::allocator<unsigned char> >::push_back(unsigned char&&)
+  1.77     18.16     0.42 591839806     0.00     0.00  std::vector<unsigned char, std::allocator<unsigned char> >::operator[](unsigned long)
+  1.75     18.58     0.42 445405249     0.00     0.00  __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >::operator*() const
+  1.70     18.99     0.41 390492288     0.00     0.00  maj(unsigned int, unsigned int, unsigned int)
+  1.64     19.39     0.40 24405768     0.00     0.00  void std::vector<unsigned char, std::allocator<unsigned char> >::_M_realloc_insert<unsigned char>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char&&)
+  1.29     19.70     0.31 451506693     0.00     0.00  operator new(unsigned long, void*)
+  1.08     19.95     0.26 347782194     0.00     0.00  std::remove_reference<unsigned char&>::type&& std::move<unsigned char&>(unsigned char&)
+  1.08     20.21     0.26 292869193     0.00     0.00  char&& std::forward<char>(std::remove_reference<char>::type&)
+  0.85     20.42     0.20 24405796     0.00     0.00  std::vector<unsigned char, std::allocator<unsigned char> >::begin()
+  0.81     20.61     0.20 195246112     0.00     0.00  std::istreambuf_iterator<char, std::char_traits<char> >::_M_at_eof() const
+  0.75     20.80     0.18        1     0.18     4.24  void std::vector<unsigned char, std::allocator<unsigned char> >::_M_range_initialize<std::istreambuf_iterator<char, std::char_traits<char> > >(std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> >, std::input_iterator_tag)
+  0.67     20.95     0.16 54913043     0.00     0.00  std::vector<unsigned char, std::allocator<unsigned char> >::_S_max_size(std::allocator<unsigned char> const&)
+  0.62     21.11     0.15 97623055     0.00     0.00  std::istreambuf_iterator<char, std::char_traits<char> >::operator++()
+  0.60     21.25     0.14 48811594     0.00     0.00  unsigned char* std::__relocate_a<unsigned char*, unsigned char*, std::allocator<unsigned char> >(unsigned char*, unsigned char*, unsigned char*, std::allocator<unsigned char>&)
+  0.56     21.39     0.14 195246110     0.00     0.00  std::vector<unsigned char, std::allocator<unsigned char> >::operator[](unsigned long) const
+  0.50     21.50     0.12 97623056     0.00     0.00  bool std::operator!=<char, std::char_traits<char> >(std::istreambuf_iterator<char, std::char_traits<char> > const&, std::istreambuf_iterator<char, std::char_traits<char> > const&)
+  0.50     21.62     0.12 97623055     0.00     0.00  std::istreambuf_iterator<char, std::char_traits<char> >::operator*() const
+  0.48     21.74     0.12 97623055     0.00     0.00  std::char_traits<char>::to_char_type(int const&)
+  0.46     21.85     0.11 97623056     0.00     0.00  std::istreambuf_iterator<char, std::char_traits<char> >::equal(std::istreambuf_iterator<char, std::char_traits<char> > const&) const
+  0.44     21.95     0.10 42710125     0.00     0.00  std::__new_allocator<unsigned char>::allocate(unsigned long, void const*)
+  0.44     22.06     0.10 24405798     0.00     0.00  std::vector<unsigned char, std::allocator<unsigned char> >::_M_check_len(unsigned long, char const*) const
+  0.37     22.15     0.09 54913043     0.00     0.00  unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&)
+  0.37     22.24     0.09 48811594     0.00     0.00  std::enable_if<std::__is_bitwise_relocatable<unsigned char, void>::value, unsigned char*>::type std::__relocate_a_1<unsigned char, unsigned char>(unsigned char*, unsigned char*, unsigned char*, std::allocator<unsigned char>&)
+  0.37     22.33     0.09 12202884     0.00     0.00  std::vector<unsigned char, std::allocator<unsigned char> >::vector(std::vector<unsigned char, std::allocator<unsigned char> > const&)
+  0.35     22.41     0.09 158637667     0.00     0.00  unsigned char* std::__niter_base<unsigned char*>(unsigned char*)
+  0.33     22.50     0.08 97623184     0.00     0.00  __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >::base() const
+  0.31     22.57     0.07        1     0.07     0.08  unsigned char* std::__uninitialized_copy<true>::__uninit_copy<unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*)
+  0.29     22.64     0.07 48811594     0.00     0.00  std::vector<unsigned char, std::allocator<unsigned char> >::_S_relocate(unsigned char*, unsigned char*, unsigned char*, std::allocator<unsigned char>&)
+  0.29     22.71     0.07        3     0.02     0.02  std::char_traits<char>::length(char const*)
+  0.27     22.77     0.07 18304326     0.00     0.00  std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_create_storage(unsigned long)
+  0.25     22.84     0.06  6101444     0.00     0.00  __gnu_cxx::__enable_if<std::__is_byte<unsigned char>::__value, void>::__type std::__fill_a1<unsigned char>(unsigned char*, unsigned char*, unsigned char const&)
+  0.23     22.89     0.06 61014484     0.00     0.00  std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_get_Tp_allocator() const
+  0.23     22.95     0.06 42710101     0.00     0.00  std::__new_allocator<unsigned char>::~__new_allocator()
+  0.23     23.00     0.06 24405798     0.00     0.00  unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&)
+  0.23     23.05     0.06 24405768     0.00     0.00  unsigned char const* std::__niter_base<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >)
+  0.23     23.11     0.06 18304330     0.00     0.00  void std::_Destroy_aux<true>::__destroy<unsigned char*>(unsigned char*, unsigned char*)
+  0.23     23.16     0.06  6101442     0.00     0.00  std::vector<unsigned char, std::allocator<unsigned char> >::vector(unsigned long, std::allocator<unsigned char> const&)
+  0.21     23.21     0.05 97623057     0.00     0.00  std::char_traits<char>::eof()
+  0.21     23.27     0.05 48811600     0.00     0.00  std::vector<unsigned char, std::allocator<unsigned char> >::max_size() const
+  0.21     23.32     0.05 42710128     0.00     0.00  std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_deallocate(unsigned char*, unsigned long)
+  0.21     23.36     0.05  6101444     0.00     0.00  unsigned char* std::__uninitialized_default_n_1<true>::__uninit_default_n<unsigned char*, unsigned long>(unsigned char*, unsigned long)
+  0.19     23.41     0.04 85420254     0.00     0.00  std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_get_Tp_allocator()
+  0.19     23.45     0.04 42710125     0.00     0.00  std::__new_allocator<unsigned char>::deallocate(unsigned char*, unsigned long)
+  0.19     23.50     0.04  6101443     0.00     0.00  std::vector<unsigned char, std::allocator<unsigned char> >::_S_check_init_len(unsigned long, std::allocator<unsigned char> const&)
+  0.17     23.54     0.04 18304330     0.00     0.00  std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl::~_Vector_impl()
+  0.17     23.58     0.04                             _init
+  0.15     23.61     0.04 42710125     0.00     0.00  std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_allocate(unsigned long)
+  0.15     23.65     0.04 12202885     0.00     0.00  unsigned char* std::__copy_move_a1<false, unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*)
+  0.12     23.68     0.03 24405768     0.00     0.00  __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >::__normal_iterator(unsigned char const* const&)
+  0.12     23.71     0.03 18304330     0.00     0.00  std::vector<unsigned char, std::allocator<unsigned char> >::~vector()
+  0.12     23.74     0.03 12202884     0.00     0.00  unsigned char* std::__copy_move_a<false, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*>(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*)
+  0.10     23.77     0.03 18304326     0.00     0.00  std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_base(unsigned long, std::allocator<unsigned char> const&)
+  0.10     23.79     0.03  6101444     0.00     0.00  unsigned char* std::fill_n<unsigned char*, unsigned long, unsigned char>(unsigned char*, unsigned long, unsigned char const&)
+  0.10     23.82     0.03        1     0.03     0.03  std::istreambuf_iterator<char, std::char_traits<char> >::istreambuf_iterator(std::istream&)
+  0.08     23.84     0.02 24405796     0.00     0.00  __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >::difference_type __gnu_cxx::operator-<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > > const&, __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > > const&)
+  0.08     23.86     0.02 12202884     0.00     0.00  unsigned char* std::__uninitialized_copy_a<__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*, unsigned char>(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*, std::allocator<unsigned char>&)
+  0.08     23.88     0.02  6101442     0.00     0.00  std::vector<unsigned char, std::allocator<unsigned char> >::_M_default_initialize(unsigned long)
+  0.06     23.89     0.01 18304328     0.00     0.00  std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl::_Vector_impl(std::allocator<unsigned char> const&)
+  0.06     23.91     0.01 12202884     0.00     0.00  std::vector<unsigned char, std::allocator<unsigned char> >::end() const
+  0.06     23.92     0.01  6101444     0.00     0.00  void std::__fill_a<unsigned char*, unsigned char>(unsigned char*, unsigned char*, unsigned char const&)
+  0.04     23.93     0.01 18304330     0.00     0.00  std::_Vector_base<unsigned char, std::allocator<unsigned char> >::~_Vector_base()
+  0.04     23.94     0.01 18304330     0.00     0.00  void std::_Destroy<unsigned char*>(unsigned char*, unsigned char*)
+  0.04     23.95     0.01 12202885     0.00     0.00  unsigned char* std::__copy_move<false, true, std::random_access_iterator_tag>::__copy_m<unsigned char const, unsigned char>(unsigned char const*, unsigned char const*, unsigned char*)
+  0.04     23.96     0.01 12202885     0.00     0.00  unsigned char* std::__niter_wrap<unsigned char*>(unsigned char* const&, unsigned char*)
+  0.04     23.97     0.01 12202884     0.00     0.00  std::vector<unsigned char, std::allocator<unsigned char> >::begin() const
+  0.04     23.98     0.01 12202884     0.00     0.00  unsigned char* std::__uninitialized_copy<true>::__uninit_copy<__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*>(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*)
+  0.04     23.99     0.01 12202884     0.00     0.00  unsigned char* std::uninitialized_copy<__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*>(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*)
+  0.04     24.00     0.01 12202884     0.00     0.00  unsigned char* std::copy<__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*>(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*)
+  0.04     24.01     0.01  6101444     0.00     0.00  std::__size_to_integer(unsigned long)
+  0.04     24.02     0.01        2     0.01     0.01  std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_base()
+  0.04     24.03     0.01                             std::vector<unsigned char, std::allocator<unsigned char> >::clear()
+  0.02     24.04     0.01 18304330     0.00     0.00  std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl_data::_Vector_impl_data()
+  0.02     24.04     0.01 12202885     0.00     0.00  unsigned char* std::__copy_move_a2<false, unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*)
+  0.02     24.05     0.01  6101444     0.00     0.00  void std::_Construct<unsigned char>(unsigned char*)
+  0.02     24.05     0.01  6101444     0.00     0.00  unsigned char* std::__addressof<unsigned char>(unsigned char&)
+  0.02     24.05     0.01        2     0.00     0.00  std::initializer_list<unsigned char>::begin() const
+  0.02     24.06     0.01        1     0.01     0.01  unsigned char* std::copy<unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*)
+  0.00     24.06     0.00 24405768     0.00     0.00  __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >::base() const
+  0.00     24.06     0.00 24405768     0.00     0.00  __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > > std::__miter_base<__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > > >(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >)
+  0.00     24.06     0.00  6101444     0.00     0.00  unsigned char* std::__fill_n_a<unsigned char*, unsigned long, unsigned char>(unsigned char*, unsigned long, unsigned char const&, std::random_access_iterator_tag)
+  0.00     24.06     0.00  6101444     0.00     0.00  unsigned char* std::__uninitialized_default_n<unsigned char*, unsigned long>(unsigned char*, unsigned long)
+  0.00     24.06     0.00  6101444     0.00     0.00  unsigned char* std::__uninitialized_default_n_a<unsigned char*, unsigned long, unsigned char>(unsigned char*, unsigned long, std::allocator<unsigned char>&)
+  0.00     24.06     0.00       28     0.00     0.00  void std::vector<unsigned char, std::allocator<unsigned char> >::_M_realloc_insert<char>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, char&&)
+  0.00     24.06     0.00        3     0.00     0.00  std::__new_allocator<char>::~__new_allocator()
+  0.00     24.06     0.00        3     0.00     0.00  void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)
+  0.00     24.06     0.00        3     0.00     0.02  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&)
+  0.00     24.06     0.00        3     0.00     0.00  std::__is_constant_evaluated()
+  0.00     24.06     0.00        3     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)::_Guard::_Guard(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*)
+  0.00     24.06     0.00        3     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)::_Guard::~_Guard()
+  0.00     24.06     0.00        2     0.00     0.00  write_file(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&)
+  0.00     24.06     0.00        2     0.00     0.00  unsigned char* std::vector<unsigned char, std::allocator<unsigned char> >::_M_data_ptr<unsigned char>(unsigned char*) const
+  0.00     24.06     0.00        2     0.00     0.00  std::vector<unsigned char, std::allocator<unsigned char> >::data() const
+  0.00     24.06     0.00        2     0.00     0.00  std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl::_Vector_impl()
+  0.00     24.06     0.00        2     0.00     0.00  std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_base(std::allocator<unsigned char> const&)
+  0.00     24.06     0.00        2     0.00     0.00  std::vector<unsigned char, std::allocator<unsigned char> >::_M_default_append(unsigned long)
+  0.00     24.06     0.00        2     0.00     0.00  std::vector<unsigned char, std::allocator<unsigned char> >::resize(unsigned long)
+  0.00     24.06     0.00        2     0.00     0.01  std::vector<unsigned char, std::allocator<unsigned char> >::vector()
+  0.00     24.06     0.00        2     0.00     0.00  unsigned char const* std::__miter_base<unsigned char const*>(unsigned char const*)
+  0.00     24.06     0.00        2     0.00     0.00  unsigned char const* std::__niter_base<unsigned char const*>(unsigned char const*)
+  0.00     24.06     0.00        1     0.00     4.26  read_file(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  0.00     24.06     0.00        1     0.00     0.00  std::initializer_list<unsigned char>::end() const
+  0.00     24.06     0.00        1     0.00     0.00  std::initializer_list<unsigned char>::size() const
+  0.00     24.06     0.00        1     0.00     0.00  std::istreambuf_iterator<char, std::char_traits<char> >::istreambuf_iterator()
+  0.00     24.06     0.00        1     0.00     0.08  void std::vector<unsigned char, std::allocator<unsigned char> >::_M_range_initialize<unsigned char const*>(unsigned char const*, unsigned char const*, std::forward_iterator_tag)
+  0.00     24.06     0.00        1     0.00     0.09  std::vector<unsigned char, std::allocator<unsigned char> >::vector(std::initializer_list<unsigned char>, std::allocator<unsigned char> const&)
+  0.00     24.06     0.00        1     0.00     4.24  std::vector<unsigned char, std::allocator<unsigned char> >::vector<std::istreambuf_iterator<char, std::char_traits<char> >, void>(std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> >, std::allocator<unsigned char> const&)
+  0.00     24.06     0.00        1     0.00     0.00  unsigned char* std::__copy_move_a<false, unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*)
+  0.00     24.06     0.00        1     0.00     0.08  unsigned char* std::uninitialized_copy<unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*)
+  0.00     24.06     0.00        1     0.00     0.08  unsigned char* std::__uninitialized_copy_a<unsigned char const*, unsigned char*, unsigned char>(unsigned char const*, unsigned char const*, unsigned char*, std::allocator<unsigned char>&)
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2024 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 4 byte(s) for 0.04% of 24.06 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]     99.8    0.00   24.01                 main [1]
+                0.64   18.94       2/2           sha256_stream_crypt(std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> >&, std::vector<unsigned char, std::allocator<unsigned char> > const&, unsigned long) [2]
+                0.00    4.26       1/1           read_file(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [7]
+                0.00    0.09       1/1           std::vector<unsigned char, std::allocator<unsigned char> >::vector(std::initializer_list<unsigned char>, std::allocator<unsigned char> const&) [67]
+                0.00    0.07       3/3           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [78]
+                0.00    0.01       2/2           std::vector<unsigned char, std::allocator<unsigned char> >::vector() [100]
+                0.00    0.00       4/18304330     std::vector<unsigned char, std::allocator<unsigned char> >::~vector() [45]
+                0.00    0.00       2/2           write_file(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) [116]
+                0.00    0.00       1/42710101     std::__new_allocator<unsigned char>::~__new_allocator() [84]
+                0.00    0.00       3/3           std::__new_allocator<char>::~__new_allocator() [127]
+-----------------------------------------------
+                0.64   18.94       2/2           main [1]
+[2]     81.4    0.64   18.94       2         sha256_stream_crypt(std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> >&, std::vector<unsigned char, std::allocator<unsigned char> > const&, unsigned long) [2]
+                0.46   15.51 6101442/6101442     sha256(std::vector<unsigned char, std::allocator<unsigned char> > const&) [3]
+                0.12    1.88 97623072/347782194     std::vector<unsigned char, std::allocator<unsigned char> >::push_back(unsigned char&&) [5]
+                0.28    0.00 390492220/591839806     std::vector<unsigned char, std::allocator<unsigned char> >::operator[](unsigned long) [33]
+                0.04    0.21 6101442/12202884     std::vector<unsigned char, std::allocator<unsigned char> >::vector(std::vector<unsigned char, std::allocator<unsigned char> > const&) [31]
+                0.17    0.00 195246116/524724112     std::vector<unsigned char, std::allocator<unsigned char> >::size() const [32]
+                0.02    0.13 12202884/18304330     std::vector<unsigned char, std::allocator<unsigned char> >::~vector() [45]
+                0.14    0.00 195246110/195246110     std::vector<unsigned char, std::allocator<unsigned char> >::operator[](unsigned long) const [58]
+                0.00    0.00       2/2           std::vector<unsigned char, std::allocator<unsigned char> >::resize(unsigned long) [112]
+-----------------------------------------------
+                0.46   15.51 6101442/6101442     sha256_stream_crypt(std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> >&, std::vector<unsigned char, std::allocator<unsigned char> > const&, unsigned long) [2]
+[3]     66.3    0.46   15.51 6101442         sha256(std::vector<unsigned char, std::allocator<unsigned char> > const&) [3]
+                2.33    7.00 6101442/6101442     sha256_transform(unsigned char const*, unsigned int*) [4]
+                0.32    4.80 250159122/347782194     std::vector<unsigned char, std::allocator<unsigned char> >::push_back(unsigned char&&) [5]
+                0.06    0.33 6101442/6101442     std::vector<unsigned char, std::allocator<unsigned char> >::vector(unsigned long, std::allocator<unsigned char> const&) [36]
+                0.04    0.21 6101442/12202884     std::vector<unsigned char, std::allocator<unsigned char> >::vector(std::vector<unsigned char, std::allocator<unsigned char> > const&) [31]
+                0.19    0.00 219651912/524724112     std::vector<unsigned char, std::allocator<unsigned char> >::size() const [32]
+                0.14    0.00 201347586/591839806     std::vector<unsigned char, std::allocator<unsigned char> >::operator[](unsigned long) [33]
+                0.01    0.06 6101442/18304330     std::vector<unsigned char, std::allocator<unsigned char> >::~vector() [45]
+                0.01    0.00 6101442/42710101     std::__new_allocator<unsigned char>::~__new_allocator() [84]
+-----------------------------------------------
+                2.33    7.00 6101442/6101442     sha256(std::vector<unsigned char, std::allocator<unsigned char> > const&) [3]
+[4]     38.8    2.33    7.00 6101442         sha256_transform(unsigned char const*, unsigned int*) [4]
+                0.65    1.15 390492288/390492288     ep0(unsigned int) [13]
+                0.57    1.15 390492288/390492288     ep1(unsigned int) [15]
+                0.56    0.57 292869216/292869216     sig0(unsigned int) [21]
+                0.55    0.57 292869216/292869216     sig1(unsigned int) [22]
+                0.82    0.00 390492288/390492288     ch(unsigned int, unsigned int, unsigned int) [26]
+                0.41    0.00 390492288/390492288     maj(unsigned int, unsigned int, unsigned int) [35]
+-----------------------------------------------
+                0.12    1.88 97623072/347782194     sha256_stream_crypt(std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> >&, std::vector<unsigned char, std::allocator<unsigned char> > const&, unsigned long) [2]
+                0.32    4.80 250159122/347782194     sha256(std::vector<unsigned char, std::allocator<unsigned char> > const&) [3]
+[5]     29.6    0.44    6.68 347782194         std::vector<unsigned char, std::allocator<unsigned char> >::push_back(unsigned char&&) [5]
+                1.37    5.05 347782194/347782194     unsigned char& std::vector<unsigned char, std::allocator<unsigned char> >::emplace_back<unsigned char>(unsigned char&&) [6]
+                0.26    0.00 347782194/347782194     std::remove_reference<unsigned char&>::type&& std::move<unsigned char&>(unsigned char&) [41]
+-----------------------------------------------
+                1.37    5.05 347782194/347782194     std::vector<unsigned char, std::allocator<unsigned char> >::push_back(unsigned char&&) [5]
+[6]     26.7    1.37    5.05 347782194         unsigned char& std::vector<unsigned char, std::allocator<unsigned char> >::emplace_back<unsigned char>(unsigned char&&) [6]
+                0.51    1.77 347782194/445405249     std::vector<unsigned char, std::allocator<unsigned char> >::back() [11]
+                0.40    1.49 24405768/24405768     void std::vector<unsigned char, std::allocator<unsigned char> >::_M_realloc_insert<unsigned char>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char&&) [12]
+                0.61    0.00 994535046/1067752350     unsigned char&& std::forward<unsigned char>(std::remove_reference<unsigned char>::type&) [28]
+                0.22    0.00 323376426/451506693     operator new(unsigned long, void*) [40]
+                0.03    0.02 24405768/469811045     std::vector<unsigned char, std::allocator<unsigned char> >::end() [24]
+-----------------------------------------------
+                0.00    4.26       1/1           main [1]
+[7]     17.7    0.00    4.26       1         read_file(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [7]
+                0.00    4.24       1/1           std::vector<unsigned char, std::allocator<unsigned char> >::vector<std::istreambuf_iterator<char, std::char_traits<char> >, void>(std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> >, std::allocator<unsigned char> const&) [8]
+                0.03    0.00       1/1           std::istreambuf_iterator<char, std::char_traits<char> >::istreambuf_iterator(std::istream&) [95]
+                0.00    0.00       1/42710101     std::__new_allocator<unsigned char>::~__new_allocator() [84]
+                0.00    0.00       1/1           std::istreambuf_iterator<char, std::char_traits<char> >::istreambuf_iterator() [118]
+-----------------------------------------------
+                0.00    4.24       1/1           read_file(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [7]
+[8]     17.6    0.00    4.24       1         std::vector<unsigned char, std::allocator<unsigned char> >::vector<std::istreambuf_iterator<char, std::char_traits<char> >, void>(std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> >, std::allocator<unsigned char> const&) [8]
+                0.18    4.06       1/1           void std::vector<unsigned char, std::allocator<unsigned char> >::_M_range_initialize<std::istreambuf_iterator<char, std::char_traits<char> > >(std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> >, std::input_iterator_tag) [9]
+                0.00    0.00       1/2           std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_base(std::allocator<unsigned char> const&) [115]
+-----------------------------------------------
+                0.18    4.06       1/1           std::vector<unsigned char, std::allocator<unsigned char> >::vector<std::istreambuf_iterator<char, std::char_traits<char> >, void>(std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> >, std::allocator<unsigned char> const&) [8]
+[9]     17.6    0.18    4.06       1         void std::vector<unsigned char, std::allocator<unsigned char> >::_M_range_initialize<std::istreambuf_iterator<char, std::char_traits<char> > >(std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> >, std::input_iterator_tag) [9]
+                0.12    1.61 97623056/97623056     bool std::operator!=<char, std::char_traits<char> >(std::istreambuf_iterator<char, std::char_traits<char> > const&, std::istreambuf_iterator<char, std::char_traits<char> > const&) [14]
+                0.48    0.97 97623055/97623055     unsigned char& std::vector<unsigned char, std::allocator<unsigned char> >::emplace_back<char>(char&&) [18]
+                0.12    0.56 97623055/97623055     std::istreambuf_iterator<char, std::char_traits<char> >::operator*() const [27]
+                0.15    0.05 97623055/97623055     std::istreambuf_iterator<char, std::char_traits<char> >::operator++() [47]
+-----------------------------------------------
+                0.57    0.00 585738432/3514430592     sig0(unsigned int) [21]
+                0.57    0.00 585738432/3514430592     sig1(unsigned int) [22]
+                1.15    0.00 1171476864/3514430592     ep0(unsigned int) [13]
+                1.15    0.00 1171476864/3514430592     ep1(unsigned int) [15]
+[10]    14.3    3.44    0.00 3514430592         rotr(unsigned int, unsigned int) [10]
+-----------------------------------------------
+                0.14    0.50 97623055/445405249     unsigned char& std::vector<unsigned char, std::allocator<unsigned char> >::emplace_back<char>(char&&) [18]
+                0.51    1.77 347782194/445405249     unsigned char& std::vector<unsigned char, std::allocator<unsigned char> >::emplace_back<unsigned char>(unsigned char&&) [6]
+[11]    12.1    0.65    2.27 445405249         std::vector<unsigned char, std::allocator<unsigned char> >::back() [11]
+                0.57    0.40 445405249/445405249     __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >::operator-(long) const [23]
+                0.48    0.40 445405249/469811045     std::vector<unsigned char, std::allocator<unsigned char> >::end() [24]
+                0.42    0.00 445405249/445405249     __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >::operator*() const [34]
+-----------------------------------------------
+                0.40    1.49 24405768/24405768     unsigned char& std::vector<unsigned char, std::allocator<unsigned char> >::emplace_back<unsigned char>(unsigned char&&) [6]
+[12]     7.9    0.40    1.49 24405768         void std::vector<unsigned char, std::allocator<unsigned char> >::_M_realloc_insert<unsigned char>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char&&) [12]
+                0.10    0.46 24405768/24405798     std::vector<unsigned char, std::allocator<unsigned char> >::_M_check_len(unsigned long, char const*) const [30]
+                0.07    0.31 48811536/48811594     std::vector<unsigned char, std::allocator<unsigned char> >::_S_relocate(unsigned char*, unsigned char*, unsigned char*, std::allocator<unsigned char>&) [37]
+                0.20    0.02 24405768/24405796     std::vector<unsigned char, std::allocator<unsigned char> >::begin() [44]
+                0.02    0.06 24405768/42710125     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_allocate(unsigned long) [57]
+                0.02    0.04 24405768/24405796     __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >::difference_type __gnu_cxx::operator-<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > > const&, __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > > const&) [81]
+                0.03    0.03 24405768/42710128     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_deallocate(unsigned char*, unsigned long) [64]
+                0.05    0.00 73217304/1067752350     unsigned char&& std::forward<unsigned char>(std::remove_reference<unsigned char>::type&) [28]
+                0.04    0.00 48811536/97623184     __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >::base() const [74]
+                0.03    0.00 48811536/85420254     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_get_Tp_allocator() [90]
+                0.02    0.00 24405768/451506693     operator new(unsigned long, void*) [40]
+-----------------------------------------------
+                0.65    1.15 390492288/390492288     sha256_transform(unsigned char const*, unsigned int*) [4]
+[13]     7.5    0.65    1.15 390492288         ep0(unsigned int) [13]
+                1.15    0.00 1171476864/3514430592     rotr(unsigned int, unsigned int) [10]
+-----------------------------------------------
+                0.12    1.61 97623056/97623056     void std::vector<unsigned char, std::allocator<unsigned char> >::_M_range_initialize<std::istreambuf_iterator<char, std::char_traits<char> > >(std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> >, std::input_iterator_tag) [9]
+[14]     7.2    0.12    1.61 97623056         bool std::operator!=<char, std::char_traits<char> >(std::istreambuf_iterator<char, std::char_traits<char> > const&, std::istreambuf_iterator<char, std::char_traits<char> > const&) [14]
+                0.11    1.50 97623056/97623056     std::istreambuf_iterator<char, std::char_traits<char> >::equal(std::istreambuf_iterator<char, std::char_traits<char> > const&) const [16]
+-----------------------------------------------
+                0.57    1.15 390492288/390492288     sha256_transform(unsigned char const*, unsigned int*) [4]
+[15]     7.1    0.57    1.15 390492288         ep1(unsigned int) [15]
+                1.15    0.00 1171476864/3514430592     rotr(unsigned int, unsigned int) [10]
+-----------------------------------------------
+                0.11    1.50 97623056/97623056     bool std::operator!=<char, std::char_traits<char> >(std::istreambuf_iterator<char, std::char_traits<char> > const&, std::istreambuf_iterator<char, std::char_traits<char> > const&) [14]
+[16]     6.7    0.11    1.50 97623056         std::istreambuf_iterator<char, std::char_traits<char> >::equal(std::istreambuf_iterator<char, std::char_traits<char> > const&) const [16]
+                0.20    1.30 195246112/195246112     std::istreambuf_iterator<char, std::char_traits<char> >::_M_at_eof() const [17]
+-----------------------------------------------
+                0.20    1.30 195246112/195246112     std::istreambuf_iterator<char, std::char_traits<char> >::equal(std::istreambuf_iterator<char, std::char_traits<char> > const&) const [16]
+[17]     6.2    0.20    1.30 195246112         std::istreambuf_iterator<char, std::char_traits<char> >::_M_at_eof() const [17]
+                0.34    0.55 195246112/292869167     std::istreambuf_iterator<char, std::char_traits<char> >::_M_get() const [19]
+                0.20    0.21 195246112/585738334     std::istreambuf_iterator<char, std::char_traits<char> >::_S_is_eof(int) [20]
+-----------------------------------------------
+                0.48    0.97 97623055/97623055     void std::vector<unsigned char, std::allocator<unsigned char> >::_M_range_initialize<std::istreambuf_iterator<char, std::char_traits<char> > >(std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> >, std::input_iterator_tag) [9]
+[18]     6.0    0.48    0.97 97623055         unsigned char& std::vector<unsigned char, std::allocator<unsigned char> >::emplace_back<char>(char&&) [18]
+                0.14    0.50 97623055/445405249     std::vector<unsigned char, std::allocator<unsigned char> >::back() [11]
+                0.26    0.00 292869109/292869193     char&& std::forward<char>(std::remove_reference<char>::type&) [42]
+                0.07    0.00 97623027/451506693     operator new(unsigned long, void*) [40]
+                0.00    0.00      28/28          void std::vector<unsigned char, std::allocator<unsigned char> >::_M_realloc_insert<char>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, char&&) [111]
+                0.00    0.00      28/469811045     std::vector<unsigned char, std::allocator<unsigned char> >::end() [24]
+-----------------------------------------------
+                0.17    0.27 97623055/292869167     std::istreambuf_iterator<char, std::char_traits<char> >::operator*() const [27]
+                0.34    0.55 195246112/292869167     std::istreambuf_iterator<char, std::char_traits<char> >::_M_at_eof() const [17]
+[19]     5.6    0.52    0.82 292869167         std::istreambuf_iterator<char, std::char_traits<char> >::_M_get() const [19]
+                0.40    0.42 390492222/585738334     std::istreambuf_iterator<char, std::char_traits<char> >::_S_is_eof(int) [20]
+-----------------------------------------------
+                0.20    0.21 195246112/585738334     std::istreambuf_iterator<char, std::char_traits<char> >::_M_at_eof() const [17]
+                0.40    0.42 390492222/585738334     std::istreambuf_iterator<char, std::char_traits<char> >::_M_get() const [19]
+[20]     5.1    0.60    0.64 585738334         std::istreambuf_iterator<char, std::char_traits<char> >::_S_is_eof(int) [20]
+                0.64    0.00 585738334/585738334     std::char_traits<char>::eq_int_type(int const&, int const&) [29]
+-----------------------------------------------
+                0.56    0.57 292869216/292869216     sha256_transform(unsigned char const*, unsigned int*) [4]
+[21]     4.7    0.56    0.57 292869216         sig0(unsigned int) [21]
+                0.57    0.00 585738432/3514430592     rotr(unsigned int, unsigned int) [10]
+-----------------------------------------------
+                0.55    0.57 292869216/292869216     sha256_transform(unsigned char const*, unsigned int*) [4]
+[22]     4.7    0.55    0.57 292869216         sig1(unsigned int) [22]
+                0.57    0.00 585738432/3514430592     rotr(unsigned int, unsigned int) [10]
+-----------------------------------------------
+                0.57    0.40 445405249/445405249     std::vector<unsigned char, std::allocator<unsigned char> >::back() [11]
+[23]     4.0    0.57    0.40 445405249         __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >::operator-(long) const [23]
+                0.40    0.00 445405249/939622090     __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >::__normal_iterator(unsigned char* const&) [25]
+-----------------------------------------------
+                0.00    0.00      28/469811045     unsigned char& std::vector<unsigned char, std::allocator<unsigned char> >::emplace_back<char>(char&&) [18]
+                0.03    0.02 24405768/469811045     unsigned char& std::vector<unsigned char, std::allocator<unsigned char> >::emplace_back<unsigned char>(unsigned char&&) [6]
+                0.48    0.40 445405249/469811045     std::vector<unsigned char, std::allocator<unsigned char> >::back() [11]
+[24]     3.8    0.50    0.42 469811045         std::vector<unsigned char, std::allocator<unsigned char> >::end() [24]
+                0.42    0.00 469811045/939622090     __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >::__normal_iterator(unsigned char* const&) [25]
+-----------------------------------------------
+                0.02    0.00 24405796/939622090     std::vector<unsigned char, std::allocator<unsigned char> >::begin() [44]
+                0.40    0.00 445405249/939622090     __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >::operator-(long) const [23]
+                0.42    0.00 469811045/939622090     std::vector<unsigned char, std::allocator<unsigned char> >::end() [24]
+[25]     3.5    0.84    0.00 939622090         __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >::__normal_iterator(unsigned char* const&) [25]
+-----------------------------------------------
+                0.82    0.00 390492288/390492288     sha256_transform(unsigned char const*, unsigned int*) [4]
+[26]     3.4    0.82    0.00 390492288         ch(unsigned int, unsigned int, unsigned int) [26]
+-----------------------------------------------
+                0.12    0.56 97623055/97623055     void std::vector<unsigned char, std::allocator<unsigned char> >::_M_range_initialize<std::istreambuf_iterator<char, std::char_traits<char> > >(std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> >, std::input_iterator_tag) [9]
+[27]     2.8    0.12    0.56 97623055         std::istreambuf_iterator<char, std::char_traits<char> >::operator*() const [27]
+                0.17    0.27 97623055/292869167     std::istreambuf_iterator<char, std::char_traits<char> >::_M_get() const [19]
+                0.12    0.00 97623055/97623055     std::char_traits<char>::to_char_type(int const&) [60]
+-----------------------------------------------
+                0.05    0.00 73217304/1067752350     void std::vector<unsigned char, std::allocator<unsigned char> >::_M_realloc_insert<unsigned char>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char&&) [12]
+                0.61    0.00 994535046/1067752350     unsigned char& std::vector<unsigned char, std::allocator<unsigned char> >::emplace_back<unsigned char>(unsigned char&&) [6]
+[28]     2.7    0.66    0.00 1067752350         unsigned char&& std::forward<unsigned char>(std::remove_reference<unsigned char>::type&) [28]
+-----------------------------------------------
+                0.64    0.00 585738334/585738334     std::istreambuf_iterator<char, std::char_traits<char> >::_S_is_eof(int) [20]
+[29]     2.6    0.64    0.00 585738334         std::char_traits<char>::eq_int_type(int const&, int const&) [29]
+-----------------------------------------------
+                0.00    0.00       2/24405798     std::vector<unsigned char, std::allocator<unsigned char> >::_M_default_append(unsigned long) [113]
+                0.00    0.00      28/24405798     void std::vector<unsigned char, std::allocator<unsigned char> >::_M_realloc_insert<char>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, char&&) [111]
+                0.10    0.46 24405768/24405798     void std::vector<unsigned char, std::allocator<unsigned char> >::_M_realloc_insert<unsigned char>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char&&) [12]
+[30]     2.3    0.10    0.46 24405798         std::vector<unsigned char, std::allocator<unsigned char> >::_M_check_len(unsigned long, char const*) const [30]
+                0.05    0.27 48811596/48811600     std::vector<unsigned char, std::allocator<unsigned char> >::max_size() const [38]
+                0.09    0.00 97623192/524724112     std::vector<unsigned char, std::allocator<unsigned char> >::size() const [32]
+                0.06    0.00 24405798/24405798     unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&) [85]
+-----------------------------------------------
+                0.04    0.21 6101442/12202884     sha256(std::vector<unsigned char, std::allocator<unsigned char> > const&) [3]
+                0.04    0.21 6101442/12202884     sha256_stream_crypt(std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> >&, std::vector<unsigned char, std::allocator<unsigned char> > const&, unsigned long) [2]
+[31]     2.1    0.09    0.41 12202884         std::vector<unsigned char, std::allocator<unsigned char> >::vector(std::vector<unsigned char, std::allocator<unsigned char> > const&) [31]
+                0.02    0.18 12202884/12202884     unsigned char* std::__uninitialized_copy_a<__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*, unsigned char>(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*, std::allocator<unsigned char>&) [46]
+                0.02    0.10 12202884/18304326     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_base(unsigned long, std::allocator<unsigned char> const&) [54]
+                0.01    0.01 12202884/12202884     std::vector<unsigned char, std::allocator<unsigned char> >::end() const [94]
+                0.01    0.01 12202884/12202884     std::vector<unsigned char, std::allocator<unsigned char> >::begin() const [96]
+                0.02    0.00 12202884/42710101     std::__new_allocator<unsigned char>::~__new_allocator() [84]
+                0.01    0.00 12202884/61014484     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_get_Tp_allocator() const [83]
+                0.01    0.00 12202884/524724112     std::vector<unsigned char, std::allocator<unsigned char> >::size() const [32]
+                0.01    0.00 12202884/85420254     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_get_Tp_allocator() [90]
+-----------------------------------------------
+                0.00    0.00       2/524724112     write_file(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) [116]
+                0.00    0.00       2/524724112     std::vector<unsigned char, std::allocator<unsigned char> >::_M_default_append(unsigned long) [113]
+                0.00    0.00       4/524724112     std::vector<unsigned char, std::allocator<unsigned char> >::resize(unsigned long) [112]
+                0.01    0.00 12202884/524724112     std::vector<unsigned char, std::allocator<unsigned char> >::vector(std::vector<unsigned char, std::allocator<unsigned char> > const&) [31]
+                0.09    0.00 97623192/524724112     std::vector<unsigned char, std::allocator<unsigned char> >::_M_check_len(unsigned long, char const*) const [30]
+                0.17    0.00 195246116/524724112     sha256_stream_crypt(std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> >&, std::vector<unsigned char, std::allocator<unsigned char> > const&, unsigned long) [2]
+                0.19    0.00 219651912/524724112     sha256(std::vector<unsigned char, std::allocator<unsigned char> > const&) [3]
+[32]     1.9    0.46    0.00 524724112         std::vector<unsigned char, std::allocator<unsigned char> >::size() const [32]
+-----------------------------------------------
+                0.14    0.00 201347586/591839806     sha256(std::vector<unsigned char, std::allocator<unsigned char> > const&) [3]
+                0.28    0.00 390492220/591839806     sha256_stream_crypt(std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> >&, std::vector<unsigned char, std::allocator<unsigned char> > const&, unsigned long) [2]
+[33]     1.8    0.42    0.00 591839806         std::vector<unsigned char, std::allocator<unsigned char> >::operator[](unsigned long) [33]
+-----------------------------------------------
+                0.42    0.00 445405249/445405249     std::vector<unsigned char, std::allocator<unsigned char> >::back() [11]
+[34]     1.7    0.42    0.00 445405249         __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >::operator*() const [34]
+-----------------------------------------------
+                0.41    0.00 390492288/390492288     sha256_transform(unsigned char const*, unsigned int*) [4]
+[35]     1.7    0.41    0.00 390492288         maj(unsigned int, unsigned int, unsigned int) [35]
+-----------------------------------------------
+                0.06    0.33 6101442/6101442     sha256(std::vector<unsigned char, std::allocator<unsigned char> > const&) [3]
+[36]     1.6    0.06    0.33 6101442         std::vector<unsigned char, std::allocator<unsigned char> >::vector(unsigned long, std::allocator<unsigned char> const&) [36]
+                0.02    0.18 6101442/6101442     std::vector<unsigned char, std::allocator<unsigned char> >::_M_default_initialize(unsigned long) [48]
+                0.04    0.04 6101442/6101443     std::vector<unsigned char, std::allocator<unsigned char> >::_S_check_init_len(unsigned long, std::allocator<unsigned char> const&) [69]
+                0.01    0.05 6101442/18304326     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_base(unsigned long, std::allocator<unsigned char> const&) [54]
+-----------------------------------------------
+                0.00    0.00       2/48811594     std::vector<unsigned char, std::allocator<unsigned char> >::_M_default_append(unsigned long) [113]
+                0.00    0.00      56/48811594     void std::vector<unsigned char, std::allocator<unsigned char> >::_M_realloc_insert<char>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, char&&) [111]
+                0.07    0.31 48811536/48811594     void std::vector<unsigned char, std::allocator<unsigned char> >::_M_realloc_insert<unsigned char>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char&&) [12]
+[37]     1.6    0.07    0.31 48811594         std::vector<unsigned char, std::allocator<unsigned char> >::_S_relocate(unsigned char*, unsigned char*, unsigned char*, std::allocator<unsigned char>&) [37]
+                0.14    0.17 48811594/48811594     unsigned char* std::__relocate_a<unsigned char*, unsigned char*, std::allocator<unsigned char> >(unsigned char*, unsigned char*, unsigned char*, std::allocator<unsigned char>&) [39]
+-----------------------------------------------
+                0.00    0.00       4/48811600     std::vector<unsigned char, std::allocator<unsigned char> >::_M_default_append(unsigned long) [113]
+                0.05    0.27 48811596/48811600     std::vector<unsigned char, std::allocator<unsigned char> >::_M_check_len(unsigned long, char const*) const [30]
+[38]     1.3    0.05    0.27 48811600         std::vector<unsigned char, std::allocator<unsigned char> >::max_size() const [38]
+                0.14    0.08 48811600/54913043     std::vector<unsigned char, std::allocator<unsigned char> >::_S_max_size(std::allocator<unsigned char> const&) [43]
+                0.04    0.00 48811600/61014484     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_get_Tp_allocator() const [83]
+-----------------------------------------------
+                0.14    0.17 48811594/48811594     std::vector<unsigned char, std::allocator<unsigned char> >::_S_relocate(unsigned char*, unsigned char*, unsigned char*, std::allocator<unsigned char>&) [37]
+[39]     1.3    0.14    0.17 48811594         unsigned char* std::__relocate_a<unsigned char*, unsigned char*, std::allocator<unsigned char> >(unsigned char*, unsigned char*, unsigned char*, std::allocator<unsigned char>&) [39]
+                0.09    0.00 48811594/48811594     std::enable_if<std::__is_bitwise_relocatable<unsigned char, void>::value, unsigned char*>::type std::__relocate_a_1<unsigned char, unsigned char>(unsigned char*, unsigned char*, unsigned char*, std::allocator<unsigned char>&) [66]
+                0.08    0.00 146434782/158637667     unsigned char* std::__niter_base<unsigned char*>(unsigned char*) [68]
+-----------------------------------------------
+                0.00    0.00      28/451506693     void std::vector<unsigned char, std::allocator<unsigned char> >::_M_realloc_insert<char>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, char&&) [111]
+                0.00    0.00 6101444/451506693     void std::_Construct<unsigned char>(unsigned char*) [105]
+                0.02    0.00 24405768/451506693     void std::vector<unsigned char, std::allocator<unsigned char> >::_M_realloc_insert<unsigned char>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char&&) [12]
+                0.07    0.00 97623027/451506693     unsigned char& std::vector<unsigned char, std::allocator<unsigned char> >::emplace_back<char>(char&&) [18]
+                0.22    0.00 323376426/451506693     unsigned char& std::vector<unsigned char, std::allocator<unsigned char> >::emplace_back<unsigned char>(unsigned char&&) [6]
+[40]     1.3    0.31    0.00 451506693         operator new(unsigned long, void*) [40]
+-----------------------------------------------
+                0.26    0.00 347782194/347782194     std::vector<unsigned char, std::allocator<unsigned char> >::push_back(unsigned char&&) [5]
+[41]     1.1    0.26    0.00 347782194         std::remove_reference<unsigned char&>::type&& std::move<unsigned char&>(unsigned char&) [41]
+-----------------------------------------------
+                0.00    0.00      84/292869193     void std::vector<unsigned char, std::allocator<unsigned char> >::_M_realloc_insert<char>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, char&&) [111]
+                0.26    0.00 292869109/292869193     unsigned char& std::vector<unsigned char, std::allocator<unsigned char> >::emplace_back<char>(char&&) [18]
+[42]     1.1    0.26    0.00 292869193         char&& std::forward<char>(std::remove_reference<char>::type&) [42]
+-----------------------------------------------
+                0.02    0.01 6101443/54913043     std::vector<unsigned char, std::allocator<unsigned char> >::_S_check_init_len(unsigned long, std::allocator<unsigned char> const&) [69]
+                0.14    0.08 48811600/54913043     std::vector<unsigned char, std::allocator<unsigned char> >::max_size() const [38]
+[43]     1.0    0.16    0.09 54913043         std::vector<unsigned char, std::allocator<unsigned char> >::_S_max_size(std::allocator<unsigned char> const&) [43]
+                0.09    0.00 54913043/54913043     unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&) [65]
+-----------------------------------------------
+                0.00    0.00      28/24405796     void std::vector<unsigned char, std::allocator<unsigned char> >::_M_realloc_insert<char>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, char&&) [111]
+                0.20    0.02 24405768/24405796     void std::vector<unsigned char, std::allocator<unsigned char> >::_M_realloc_insert<unsigned char>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char&&) [12]
+[44]     0.9    0.20    0.02 24405796         std::vector<unsigned char, std::allocator<unsigned char> >::begin() [44]
+                0.02    0.00 24405796/939622090     __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >::__normal_iterator(unsigned char* const&) [25]
+-----------------------------------------------
+                0.00    0.00       4/18304330     main [1]
+                0.01    0.06 6101442/18304330     sha256(std::vector<unsigned char, std::allocator<unsigned char> > const&) [3]
+                0.02    0.13 12202884/18304330     sha256_stream_crypt(std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> >&, std::vector<unsigned char, std::allocator<unsigned char> > const&, unsigned long) [2]
+[45]     0.9    0.03    0.19 18304330         std::vector<unsigned char, std::allocator<unsigned char> >::~vector() [45]
+                0.01    0.10 18304330/18304330     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::~_Vector_base() [61]
+                0.01    0.06 18304330/18304330     void std::_Destroy<unsigned char*>(unsigned char*, unsigned char*) [79]
+                0.01    0.00 18304330/85420254     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_get_Tp_allocator() [90]
+-----------------------------------------------
+                0.02    0.18 12202884/12202884     std::vector<unsigned char, std::allocator<unsigned char> >::vector(std::vector<unsigned char, std::allocator<unsigned char> > const&) [31]
+[46]     0.8    0.02    0.18 12202884         unsigned char* std::__uninitialized_copy_a<__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*, unsigned char>(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*, std::allocator<unsigned char>&) [46]
+                0.01    0.17 12202884/12202884     unsigned char* std::uninitialized_copy<__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*>(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*) [49]
+-----------------------------------------------
+                0.15    0.05 97623055/97623055     void std::vector<unsigned char, std::allocator<unsigned char> >::_M_range_initialize<std::istreambuf_iterator<char, std::char_traits<char> > >(std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> >, std::input_iterator_tag) [9]
+[47]     0.8    0.15    0.05 97623055         std::istreambuf_iterator<char, std::char_traits<char> >::operator++() [47]
+                0.05    0.00 97623055/97623057     std::char_traits<char>::eof() [88]
+-----------------------------------------------
+                0.02    0.18 6101442/6101442     std::vector<unsigned char, std::allocator<unsigned char> >::vector(unsigned long, std::allocator<unsigned char> const&) [36]
+[48]     0.8    0.02    0.18 6101442         std::vector<unsigned char, std::allocator<unsigned char> >::_M_default_initialize(unsigned long) [48]
+                0.00    0.17 6101442/6101444     unsigned char* std::__uninitialized_default_n_a<unsigned char*, unsigned long, unsigned char>(unsigned char*, unsigned long, std::allocator<unsigned char>&) [52]
+                0.00    0.00 6101442/85420254     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_get_Tp_allocator() [90]
+-----------------------------------------------
+                0.01    0.17 12202884/12202884     unsigned char* std::__uninitialized_copy_a<__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*, unsigned char>(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*, std::allocator<unsigned char>&) [46]
+[49]     0.8    0.01    0.17 12202884         unsigned char* std::uninitialized_copy<__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*>(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*) [49]
+                0.01    0.16 12202884/12202884     unsigned char* std::__uninitialized_copy<true>::__uninit_copy<__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*>(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*) [53]
+-----------------------------------------------
+                0.05    0.12 6101444/6101444     unsigned char* std::__uninitialized_default_n<unsigned char*, unsigned long>(unsigned char*, unsigned long) [51]
+[50]     0.7    0.05    0.12 6101444         unsigned char* std::__uninitialized_default_n_1<true>::__uninit_default_n<unsigned char*, unsigned long>(unsigned char*, unsigned long) [50]
+                0.03    0.09 6101444/6101444     unsigned char* std::fill_n<unsigned char*, unsigned long, unsigned char>(unsigned char*, unsigned long, unsigned char const&) [62]
+                0.01    0.00 6101444/6101444     void std::_Construct<unsigned char>(unsigned char*) [105]
+                0.01    0.00 6101444/6101444     unsigned char* std::__addressof<unsigned char>(unsigned char&) [108]
+-----------------------------------------------
+                0.00    0.17 6101444/6101444     unsigned char* std::__uninitialized_default_n_a<unsigned char*, unsigned long, unsigned char>(unsigned char*, unsigned long, std::allocator<unsigned char>&) [52]
+[51]     0.7    0.00    0.17 6101444         unsigned char* std::__uninitialized_default_n<unsigned char*, unsigned long>(unsigned char*, unsigned long) [51]
+                0.05    0.12 6101444/6101444     unsigned char* std::__uninitialized_default_n_1<true>::__uninit_default_n<unsigned char*, unsigned long>(unsigned char*, unsigned long) [50]
+-----------------------------------------------
+                0.00    0.00       2/6101444     std::vector<unsigned char, std::allocator<unsigned char> >::_M_default_append(unsigned long) [113]
+                0.00    0.17 6101442/6101444     std::vector<unsigned char, std::allocator<unsigned char> >::_M_default_initialize(unsigned long) [48]
+[52]     0.7    0.00    0.17 6101444         unsigned char* std::__uninitialized_default_n_a<unsigned char*, unsigned long, unsigned char>(unsigned char*, unsigned long, std::allocator<unsigned char>&) [52]
+                0.00    0.17 6101444/6101444     unsigned char* std::__uninitialized_default_n<unsigned char*, unsigned long>(unsigned char*, unsigned long) [51]
+-----------------------------------------------
+                0.01    0.16 12202884/12202884     unsigned char* std::uninitialized_copy<__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*>(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*) [49]
+[53]     0.7    0.01    0.16 12202884         unsigned char* std::__uninitialized_copy<true>::__uninit_copy<__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*>(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*) [53]
+                0.01    0.15 12202884/12202884     unsigned char* std::copy<__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*>(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*) [55]
+-----------------------------------------------
+                0.01    0.05 6101442/18304326     std::vector<unsigned char, std::allocator<unsigned char> >::vector(unsigned long, std::allocator<unsigned char> const&) [36]
+                0.02    0.10 12202884/18304326     std::vector<unsigned char, std::allocator<unsigned char> >::vector(std::vector<unsigned char, std::allocator<unsigned char> > const&) [31]
+[54]     0.7    0.03    0.14 18304326         std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_base(unsigned long, std::allocator<unsigned char> const&) [54]
+                0.07    0.06 18304326/18304326     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_create_storage(unsigned long) [59]
+                0.01    0.00 18304326/18304328     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl::_Vector_impl(std::allocator<unsigned char> const&) [97]
+-----------------------------------------------
+                0.01    0.15 12202884/12202884     unsigned char* std::__uninitialized_copy<true>::__uninit_copy<__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*>(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*) [53]
+[55]     0.7    0.01    0.15 12202884         unsigned char* std::copy<__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*>(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*) [55]
+                0.03    0.12 12202884/12202884     unsigned char* std::__copy_move_a<false, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*>(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*) [56]
+                0.00    0.00 24405768/24405768     __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > > std::__miter_base<__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > > >(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >) [126]
+-----------------------------------------------
+                0.03    0.12 12202884/12202884     unsigned char* std::copy<__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*>(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*) [55]
+[56]     0.6    0.03    0.12 12202884         unsigned char* std::__copy_move_a<false, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*>(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*) [56]
+                0.06    0.00 24405768/24405768     unsigned char const* std::__niter_base<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >) [86]
+                0.03    0.01 12202884/12202885     unsigned char* std::__copy_move_a1<false, unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*) [89]
+                0.01    0.00 12202884/12202885     unsigned char* std::__niter_wrap<unsigned char*>(unsigned char* const&, unsigned char*) [102]
+                0.01    0.00 12202884/158637667     unsigned char* std::__niter_base<unsigned char*>(unsigned char*) [68]
+-----------------------------------------------
+                0.00    0.00       1/42710125     void std::vector<unsigned char, std::allocator<unsigned char> >::_M_range_initialize<unsigned char const*>(unsigned char const*, unsigned char const*, std::forward_iterator_tag) [70]
+                0.00    0.00       2/42710125     std::vector<unsigned char, std::allocator<unsigned char> >::_M_default_append(unsigned long) [113]
+                0.00    0.00      28/42710125     void std::vector<unsigned char, std::allocator<unsigned char> >::_M_realloc_insert<char>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, char&&) [111]
+                0.01    0.04 18304326/42710125     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_create_storage(unsigned long) [59]
+                0.02    0.06 24405768/42710125     void std::vector<unsigned char, std::allocator<unsigned char> >::_M_realloc_insert<unsigned char>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char&&) [12]
+[57]     0.6    0.04    0.10 42710125         std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_allocate(unsigned long) [57]
+                0.10    0.00 42710125/42710125     std::__new_allocator<unsigned char>::allocate(unsigned long, void const*) [63]
+-----------------------------------------------
+                0.14    0.00 195246110/195246110     sha256_stream_crypt(std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> >&, std::vector<unsigned char, std::allocator<unsigned char> > const&, unsigned long) [2]
+[58]     0.6    0.14    0.00 195246110         std::vector<unsigned char, std::allocator<unsigned char> >::operator[](unsigned long) const [58]
+-----------------------------------------------
+                0.07    0.06 18304326/18304326     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_base(unsigned long, std::allocator<unsigned char> const&) [54]
+[59]     0.5    0.07    0.06 18304326         std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_create_storage(unsigned long) [59]
+                0.01    0.04 18304326/42710125     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_allocate(unsigned long) [57]
+-----------------------------------------------
+                0.12    0.00 97623055/97623055     std::istreambuf_iterator<char, std::char_traits<char> >::operator*() const [27]
+[60]     0.5    0.12    0.00 97623055         std::char_traits<char>::to_char_type(int const&) [60]
+-----------------------------------------------
+                0.01    0.10 18304330/18304330     std::vector<unsigned char, std::allocator<unsigned char> >::~vector() [45]
+[61]     0.5    0.01    0.10 18304330         std::_Vector_base<unsigned char, std::allocator<unsigned char> >::~_Vector_base() [61]
+                0.04    0.02 18304330/18304330     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl::~_Vector_impl() [80]
+                0.02    0.02 18304330/42710128     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_deallocate(unsigned char*, unsigned long) [64]
+-----------------------------------------------
+                0.03    0.09 6101444/6101444     unsigned char* std::__uninitialized_default_n_1<true>::__uninit_default_n<unsigned char*, unsigned long>(unsigned char*, unsigned long) [50]
+[62]     0.5    0.03    0.09 6101444         unsigned char* std::fill_n<unsigned char*, unsigned long, unsigned char>(unsigned char*, unsigned long, unsigned char const&) [62]
+                0.00    0.07 6101444/6101444     unsigned char* std::__fill_n_a<unsigned char*, unsigned long, unsigned char>(unsigned char*, unsigned long, unsigned char const&, std::random_access_iterator_tag) [75]
+                0.01    0.00 6101444/6101444     std::__size_to_integer(unsigned long) [103]
+-----------------------------------------------
+                0.10    0.00 42710125/42710125     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_allocate(unsigned long) [57]
+[63]     0.4    0.10    0.00 42710125         std::__new_allocator<unsigned char>::allocate(unsigned long, void const*) [63]
+-----------------------------------------------
+                0.00    0.00       2/42710128     std::vector<unsigned char, std::allocator<unsigned char> >::_M_default_append(unsigned long) [113]
+                0.00    0.00      28/42710128     void std::vector<unsigned char, std::allocator<unsigned char> >::_M_realloc_insert<char>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, char&&) [111]
+                0.02    0.02 18304330/42710128     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::~_Vector_base() [61]
+                0.03    0.03 24405768/42710128     void std::vector<unsigned char, std::allocator<unsigned char> >::_M_realloc_insert<unsigned char>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char&&) [12]
+[64]     0.4    0.05    0.04 42710128         std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_deallocate(unsigned char*, unsigned long) [64]
+                0.04    0.00 42710125/42710125     std::__new_allocator<unsigned char>::deallocate(unsigned char*, unsigned long) [91]
+-----------------------------------------------
+                0.09    0.00 54913043/54913043     std::vector<unsigned char, std::allocator<unsigned char> >::_S_max_size(std::allocator<unsigned char> const&) [43]
+[65]     0.4    0.09    0.00 54913043         unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&) [65]
+-----------------------------------------------
+                0.09    0.00 48811594/48811594     unsigned char* std::__relocate_a<unsigned char*, unsigned char*, std::allocator<unsigned char> >(unsigned char*, unsigned char*, unsigned char*, std::allocator<unsigned char>&) [39]
+[66]     0.4    0.09    0.00 48811594         std::enable_if<std::__is_bitwise_relocatable<unsigned char, void>::value, unsigned char*>::type std::__relocate_a_1<unsigned char, unsigned char>(unsigned char*, unsigned char*, unsigned char*, std::allocator<unsigned char>&) [66]
+-----------------------------------------------
+                0.00    0.09       1/1           main [1]
+[67]     0.4    0.00    0.09       1         std::vector<unsigned char, std::allocator<unsigned char> >::vector(std::initializer_list<unsigned char>, std::allocator<unsigned char> const&) [67]
+                0.00    0.08       1/1           void std::vector<unsigned char, std::allocator<unsigned char> >::_M_range_initialize<unsigned char const*>(unsigned char const*, unsigned char const*, std::forward_iterator_tag) [70]
+                0.00    0.00       1/1           std::initializer_list<unsigned char>::end() const [110]
+                0.00    0.00       1/2           std::initializer_list<unsigned char>::begin() const [109]
+                0.00    0.00       1/2           std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_base(std::allocator<unsigned char> const&) [115]
+-----------------------------------------------
+                0.00    0.00       1/158637667     unsigned char* std::__copy_move_a<false, unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*) [114]
+                0.01    0.00 12202884/158637667     unsigned char* std::__copy_move_a<false, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*>(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*) [56]
+                0.08    0.00 146434782/158637667     unsigned char* std::__relocate_a<unsigned char*, unsigned char*, std::allocator<unsigned char> >(unsigned char*, unsigned char*, unsigned char*, std::allocator<unsigned char>&) [39]
+[68]     0.4    0.08    0.00 158637667         unsigned char* std::__niter_base<unsigned char*>(unsigned char*) [68]
+-----------------------------------------------
+                0.00    0.00       1/6101443     void std::vector<unsigned char, std::allocator<unsigned char> >::_M_range_initialize<unsigned char const*>(unsigned char const*, unsigned char const*, std::forward_iterator_tag) [70]
+                0.04    0.04 6101442/6101443     std::vector<unsigned char, std::allocator<unsigned char> >::vector(unsigned long, std::allocator<unsigned char> const&) [36]
+[69]     0.3    0.04    0.04 6101443         std::vector<unsigned char, std::allocator<unsigned char> >::_S_check_init_len(unsigned long, std::allocator<unsigned char> const&) [69]
+                0.02    0.01 6101443/54913043     std::vector<unsigned char, std::allocator<unsigned char> >::_S_max_size(std::allocator<unsigned char> const&) [43]
+                0.01    0.00 6101443/42710101     std::__new_allocator<unsigned char>::~__new_allocator() [84]
+-----------------------------------------------
+                0.00    0.08       1/1           std::vector<unsigned char, std::allocator<unsigned char> >::vector(std::initializer_list<unsigned char>, std::allocator<unsigned char> const&) [67]
+[70]     0.3    0.00    0.08       1         void std::vector<unsigned char, std::allocator<unsigned char> >::_M_range_initialize<unsigned char const*>(unsigned char const*, unsigned char const*, std::forward_iterator_tag) [70]
+                0.00    0.08       1/1           unsigned char* std::__uninitialized_copy_a<unsigned char const*, unsigned char*, unsigned char>(unsigned char const*, unsigned char const*, unsigned char*, std::allocator<unsigned char>&) [73]
+                0.00    0.00       1/6101443     std::vector<unsigned char, std::allocator<unsigned char> >::_S_check_init_len(unsigned long, std::allocator<unsigned char> const&) [69]
+                0.00    0.00       1/42710125     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_allocate(unsigned long) [57]
+                0.00    0.00       2/85420254     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_get_Tp_allocator() [90]
+-----------------------------------------------
+                0.07    0.01       1/1           unsigned char* std::uninitialized_copy<unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*) [72]
+[71]     0.3    0.07    0.01       1         unsigned char* std::__uninitialized_copy<true>::__uninit_copy<unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*) [71]
+                0.01    0.00       1/1           unsigned char* std::copy<unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*) [106]
+-----------------------------------------------
+                0.00    0.08       1/1           unsigned char* std::__uninitialized_copy_a<unsigned char const*, unsigned char*, unsigned char>(unsigned char const*, unsigned char const*, unsigned char*, std::allocator<unsigned char>&) [73]
+[72]     0.3    0.00    0.08       1         unsigned char* std::uninitialized_copy<unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*) [72]
+                0.07    0.01       1/1           unsigned char* std::__uninitialized_copy<true>::__uninit_copy<unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*) [71]
+-----------------------------------------------
+                0.00    0.08       1/1           void std::vector<unsigned char, std::allocator<unsigned char> >::_M_range_initialize<unsigned char const*>(unsigned char const*, unsigned char const*, std::forward_iterator_tag) [70]
+[73]     0.3    0.00    0.08       1         unsigned char* std::__uninitialized_copy_a<unsigned char const*, unsigned char*, unsigned char>(unsigned char const*, unsigned char const*, unsigned char*, std::allocator<unsigned char>&) [73]
+                0.00    0.08       1/1           unsigned char* std::uninitialized_copy<unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*) [72]
+-----------------------------------------------
+                0.00    0.00      56/97623184     void std::vector<unsigned char, std::allocator<unsigned char> >::_M_realloc_insert<char>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, char&&) [111]
+                0.04    0.00 48811536/97623184     void std::vector<unsigned char, std::allocator<unsigned char> >::_M_realloc_insert<unsigned char>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char&&) [12]
+                0.04    0.00 48811592/97623184     __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >::difference_type __gnu_cxx::operator-<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > > const&, __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > > const&) [81]
+[74]     0.3    0.08    0.00 97623184         __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >::base() const [74]
+-----------------------------------------------
+                0.00    0.07 6101444/6101444     unsigned char* std::fill_n<unsigned char*, unsigned long, unsigned char>(unsigned char*, unsigned long, unsigned char const&) [62]
+[75]     0.3    0.00    0.07 6101444         unsigned char* std::__fill_n_a<unsigned char*, unsigned long, unsigned char>(unsigned char*, unsigned long, unsigned char const&, std::random_access_iterator_tag) [75]
+                0.01    0.06 6101444/6101444     void std::__fill_a<unsigned char*, unsigned char>(unsigned char*, unsigned char*, unsigned char const&) [76]
+-----------------------------------------------
+                0.01    0.06 6101444/6101444     unsigned char* std::__fill_n_a<unsigned char*, unsigned long, unsigned char>(unsigned char*, unsigned long, unsigned char const&, std::random_access_iterator_tag) [75]
+[76]     0.3    0.01    0.06 6101444         void std::__fill_a<unsigned char*, unsigned char>(unsigned char*, unsigned char*, unsigned char const&) [76]
+                0.06    0.00 6101444/6101444     __gnu_cxx::__enable_if<std::__is_byte<unsigned char>::__value, void>::__type std::__fill_a1<unsigned char>(unsigned char*, unsigned char*, unsigned char const&) [82]
+-----------------------------------------------
+                0.07    0.00       3/3           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [78]
+[77]     0.3    0.07    0.00       3         std::char_traits<char>::length(char const*) [77]
+                0.00    0.00       3/3           std::__is_constant_evaluated() [129]
+-----------------------------------------------
+                0.00    0.07       3/3           main [1]
+[78]     0.3    0.00    0.07       3         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [78]
+                0.07    0.00       3/3           std::char_traits<char>::length(char const*) [77]
+                0.00    0.00       3/3           void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [128]
+-----------------------------------------------
+                0.01    0.06 18304330/18304330     std::vector<unsigned char, std::allocator<unsigned char> >::~vector() [45]
+[79]     0.3    0.01    0.06 18304330         void std::_Destroy<unsigned char*>(unsigned char*, unsigned char*) [79]
+                0.06    0.00 18304330/18304330     void std::_Destroy_aux<true>::__destroy<unsigned char*>(unsigned char*, unsigned char*) [87]
+-----------------------------------------------
+                0.04    0.02 18304330/18304330     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::~_Vector_base() [61]
+[80]     0.3    0.04    0.02 18304330         std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl::~_Vector_impl() [80]
+                0.02    0.00 18304330/42710101     std::__new_allocator<unsigned char>::~__new_allocator() [84]
+-----------------------------------------------
+                0.00    0.00      28/24405796     void std::vector<unsigned char, std::allocator<unsigned char> >::_M_realloc_insert<char>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, char&&) [111]
+                0.02    0.04 24405768/24405796     void std::vector<unsigned char, std::allocator<unsigned char> >::_M_realloc_insert<unsigned char>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char&&) [12]
+[81]     0.2    0.02    0.04 24405796         __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >::difference_type __gnu_cxx::operator-<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > > const&, __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > > const&) [81]
+                0.04    0.00 48811592/97623184     __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >::base() const [74]
+-----------------------------------------------
+                0.06    0.00 6101444/6101444     void std::__fill_a<unsigned char*, unsigned char>(unsigned char*, unsigned char*, unsigned char const&) [76]
+[82]     0.2    0.06    0.00 6101444         __gnu_cxx::__enable_if<std::__is_byte<unsigned char>::__value, void>::__type std::__fill_a1<unsigned char>(unsigned char*, unsigned char*, unsigned char const&) [82]
+-----------------------------------------------
+                0.01    0.00 12202884/61014484     std::vector<unsigned char, std::allocator<unsigned char> >::vector(std::vector<unsigned char, std::allocator<unsigned char> > const&) [31]
+                0.04    0.00 48811600/61014484     std::vector<unsigned char, std::allocator<unsigned char> >::max_size() const [38]
+[83]     0.2    0.06    0.00 61014484         std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_get_Tp_allocator() const [83]
+-----------------------------------------------
+                0.00    0.00       1/42710101     read_file(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [7]
+                0.00    0.00       1/42710101     main [1]
+                0.01    0.00 6101442/42710101     sha256(std::vector<unsigned char, std::allocator<unsigned char> > const&) [3]
+                0.01    0.00 6101443/42710101     std::vector<unsigned char, std::allocator<unsigned char> >::_S_check_init_len(unsigned long, std::allocator<unsigned char> const&) [69]
+                0.02    0.00 12202884/42710101     std::vector<unsigned char, std::allocator<unsigned char> >::vector(std::vector<unsigned char, std::allocator<unsigned char> > const&) [31]
+                0.02    0.00 18304330/42710101     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl::~_Vector_impl() [80]
+[84]     0.2    0.06    0.00 42710101         std::__new_allocator<unsigned char>::~__new_allocator() [84]
+-----------------------------------------------
+                0.06    0.00 24405798/24405798     std::vector<unsigned char, std::allocator<unsigned char> >::_M_check_len(unsigned long, char const*) const [30]
+[85]     0.2    0.06    0.00 24405798         unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&) [85]
+-----------------------------------------------
+                0.06    0.00 24405768/24405768     unsigned char* std::__copy_move_a<false, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*>(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*) [56]
+[86]     0.2    0.06    0.00 24405768         unsigned char const* std::__niter_base<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >) [86]
+                0.00    0.00 24405768/24405768     __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >::base() const [125]
+-----------------------------------------------
+                0.06    0.00 18304330/18304330     void std::_Destroy<unsigned char*>(unsigned char*, unsigned char*) [79]
+[87]     0.2    0.06    0.00 18304330         void std::_Destroy_aux<true>::__destroy<unsigned char*>(unsigned char*, unsigned char*) [87]
+-----------------------------------------------
+                0.00    0.00       1/97623057     std::istreambuf_iterator<char, std::char_traits<char> >::istreambuf_iterator(std::istream&) [95]
+                0.00    0.00       1/97623057     std::istreambuf_iterator<char, std::char_traits<char> >::istreambuf_iterator() [118]
+                0.05    0.00 97623055/97623057     std::istreambuf_iterator<char, std::char_traits<char> >::operator++() [47]
+[88]     0.2    0.05    0.00 97623057         std::char_traits<char>::eof() [88]
+-----------------------------------------------
+                0.00    0.00       1/12202885     unsigned char* std::__copy_move_a<false, unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*) [114]
+                0.03    0.01 12202884/12202885     unsigned char* std::__copy_move_a<false, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*>(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*) [56]
+[89]     0.2    0.04    0.01 12202885         unsigned char* std::__copy_move_a1<false, unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*) [89]
+                0.01    0.01 12202885/12202885     unsigned char* std::__copy_move_a2<false, unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*) [98]
+-----------------------------------------------
+                0.00    0.00       2/85420254     void std::vector<unsigned char, std::allocator<unsigned char> >::_M_range_initialize<unsigned char const*>(unsigned char const*, unsigned char const*, std::forward_iterator_tag) [70]
+                0.00    0.00       4/85420254     std::vector<unsigned char, std::allocator<unsigned char> >::_M_default_append(unsigned long) [113]
+                0.00    0.00      56/85420254     void std::vector<unsigned char, std::allocator<unsigned char> >::_M_realloc_insert<char>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, char&&) [111]
+                0.00    0.00 6101442/85420254     std::vector<unsigned char, std::allocator<unsigned char> >::_M_default_initialize(unsigned long) [48]
+                0.01    0.00 12202884/85420254     std::vector<unsigned char, std::allocator<unsigned char> >::vector(std::vector<unsigned char, std::allocator<unsigned char> > const&) [31]
+                0.01    0.00 18304330/85420254     std::vector<unsigned char, std::allocator<unsigned char> >::~vector() [45]
+                0.03    0.00 48811536/85420254     void std::vector<unsigned char, std::allocator<unsigned char> >::_M_realloc_insert<unsigned char>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char&&) [12]
+[90]     0.2    0.04    0.00 85420254         std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_get_Tp_allocator() [90]
+-----------------------------------------------
+                0.04    0.00 42710125/42710125     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_deallocate(unsigned char*, unsigned long) [64]
+[91]     0.2    0.04    0.00 42710125         std::__new_allocator<unsigned char>::deallocate(unsigned char*, unsigned long) [91]
+-----------------------------------------------
+                                                 <spontaneous>
+[92]     0.2    0.04    0.00                 _init [92]
+-----------------------------------------------
+                0.01    0.00 12202884/24405768     std::vector<unsigned char, std::allocator<unsigned char> >::begin() const [96]
+                0.01    0.00 12202884/24405768     std::vector<unsigned char, std::allocator<unsigned char> >::end() const [94]
+[93]     0.1    0.03    0.00 24405768         __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >::__normal_iterator(unsigned char const* const&) [93]
+-----------------------------------------------
+                0.01    0.01 12202884/12202884     std::vector<unsigned char, std::allocator<unsigned char> >::vector(std::vector<unsigned char, std::allocator<unsigned char> > const&) [31]
+[94]     0.1    0.01    0.01 12202884         std::vector<unsigned char, std::allocator<unsigned char> >::end() const [94]
+                0.01    0.00 12202884/24405768     __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >::__normal_iterator(unsigned char const* const&) [93]
+-----------------------------------------------
+                0.03    0.00       1/1           read_file(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [7]
+[95]     0.1    0.03    0.00       1         std::istreambuf_iterator<char, std::char_traits<char> >::istreambuf_iterator(std::istream&) [95]
+                0.00    0.00       1/97623057     std::char_traits<char>::eof() [88]
+-----------------------------------------------
+                0.01    0.01 12202884/12202884     std::vector<unsigned char, std::allocator<unsigned char> >::vector(std::vector<unsigned char, std::allocator<unsigned char> > const&) [31]
+[96]     0.1    0.01    0.01 12202884         std::vector<unsigned char, std::allocator<unsigned char> >::begin() const [96]
+                0.01    0.00 12202884/24405768     __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >::__normal_iterator(unsigned char const* const&) [93]
+-----------------------------------------------
+                0.00    0.00       2/18304328     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_base(std::allocator<unsigned char> const&) [115]
+                0.01    0.00 18304326/18304328     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_base(unsigned long, std::allocator<unsigned char> const&) [54]
+[97]     0.1    0.01    0.00 18304328         std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl::_Vector_impl(std::allocator<unsigned char> const&) [97]
+                0.00    0.00 18304328/18304330     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl_data::_Vector_impl_data() [107]
+-----------------------------------------------
+                0.01    0.01 12202885/12202885     unsigned char* std::__copy_move_a1<false, unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*) [89]
+[98]     0.1    0.01    0.01 12202885         unsigned char* std::__copy_move_a2<false, unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*) [98]
+                0.01    0.00 12202885/12202885     unsigned char* std::__copy_move<false, true, std::random_access_iterator_tag>::__copy_m<unsigned char const, unsigned char>(unsigned char const*, unsigned char const*, unsigned char*) [101]
+-----------------------------------------------
+                0.01    0.00       2/2           std::vector<unsigned char, std::allocator<unsigned char> >::vector() [100]
+[99]     0.0    0.01    0.00       2         std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_base() [99]
+                0.00    0.00       2/2           std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl::_Vector_impl() [117]
+-----------------------------------------------
+                0.00    0.01       2/2           main [1]
+[100]    0.0    0.00    0.01       2         std::vector<unsigned char, std::allocator<unsigned char> >::vector() [100]
+                0.01    0.00       2/2           std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_base() [99]
+-----------------------------------------------
+                0.01    0.00 12202885/12202885     unsigned char* std::__copy_move_a2<false, unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*) [98]
+[101]    0.0    0.01    0.00 12202885         unsigned char* std::__copy_move<false, true, std::random_access_iterator_tag>::__copy_m<unsigned char const, unsigned char>(unsigned char const*, unsigned char const*, unsigned char*) [101]
+-----------------------------------------------
+                0.00    0.00       1/12202885     unsigned char* std::__copy_move_a<false, unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*) [114]
+                0.01    0.00 12202884/12202885     unsigned char* std::__copy_move_a<false, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*>(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*) [56]
+[102]    0.0    0.01    0.00 12202885         unsigned char* std::__niter_wrap<unsigned char*>(unsigned char* const&, unsigned char*) [102]
+-----------------------------------------------
+                0.01    0.00 6101444/6101444     unsigned char* std::fill_n<unsigned char*, unsigned long, unsigned char>(unsigned char*, unsigned long, unsigned char const&) [62]
+[103]    0.0    0.01    0.00 6101444         std::__size_to_integer(unsigned long) [103]
+-----------------------------------------------
+                                                 <spontaneous>
+[104]    0.0    0.01    0.00                 std::vector<unsigned char, std::allocator<unsigned char> >::clear() [104]
+-----------------------------------------------
+                0.01    0.00 6101444/6101444     unsigned char* std::__uninitialized_default_n_1<true>::__uninit_default_n<unsigned char*, unsigned long>(unsigned char*, unsigned long) [50]
+[105]    0.0    0.01    0.00 6101444         void std::_Construct<unsigned char>(unsigned char*) [105]
+                0.00    0.00 6101444/451506693     operator new(unsigned long, void*) [40]
+-----------------------------------------------
+                0.01    0.00       1/1           unsigned char* std::__uninitialized_copy<true>::__uninit_copy<unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*) [71]
+[106]    0.0    0.01    0.00       1         unsigned char* std::copy<unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*) [106]
+                0.00    0.00       1/1           unsigned char* std::__copy_move_a<false, unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*) [114]
+                0.00    0.00       2/2           unsigned char const* std::__miter_base<unsigned char const*>(unsigned char const*) [134]
+-----------------------------------------------
+                0.00    0.00       2/18304330     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl::_Vector_impl() [117]
+                0.00    0.00 18304328/18304330     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl::_Vector_impl(std::allocator<unsigned char> const&) [97]
+[107]    0.0    0.01    0.00 18304330         std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl_data::_Vector_impl_data() [107]
+-----------------------------------------------
+                0.01    0.00 6101444/6101444     unsigned char* std::__uninitialized_default_n_1<true>::__uninit_default_n<unsigned char*, unsigned long>(unsigned char*, unsigned long) [50]
+[108]    0.0    0.01    0.00 6101444         unsigned char* std::__addressof<unsigned char>(unsigned char&) [108]
+-----------------------------------------------
+                0.00    0.00       1/2           std::vector<unsigned char, std::allocator<unsigned char> >::vector(std::initializer_list<unsigned char>, std::allocator<unsigned char> const&) [67]
+                0.00    0.00       1/2           std::initializer_list<unsigned char>::end() const [110]
+[109]    0.0    0.01    0.00       2         std::initializer_list<unsigned char>::begin() const [109]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<unsigned char, std::allocator<unsigned char> >::vector(std::initializer_list<unsigned char>, std::allocator<unsigned char> const&) [67]
+[110]    0.0    0.00    0.00       1         std::initializer_list<unsigned char>::end() const [110]
+                0.00    0.00       1/2           std::initializer_list<unsigned char>::begin() const [109]
+                0.00    0.00       1/1           std::initializer_list<unsigned char>::size() const [136]
+-----------------------------------------------
+                0.00    0.00      28/28          unsigned char& std::vector<unsigned char, std::allocator<unsigned char> >::emplace_back<char>(char&&) [18]
+[111]    0.0    0.00    0.00      28         void std::vector<unsigned char, std::allocator<unsigned char> >::_M_realloc_insert<char>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, char&&) [111]
+                0.00    0.00      28/24405798     std::vector<unsigned char, std::allocator<unsigned char> >::_M_check_len(unsigned long, char const*) const [30]
+                0.00    0.00      56/48811594     std::vector<unsigned char, std::allocator<unsigned char> >::_S_relocate(unsigned char*, unsigned char*, unsigned char*, std::allocator<unsigned char>&) [37]
+                0.00    0.00      28/24405796     std::vector<unsigned char, std::allocator<unsigned char> >::begin() [44]
+                0.00    0.00      28/42710125     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_allocate(unsigned long) [57]
+                0.00    0.00      84/292869193     char&& std::forward<char>(std::remove_reference<char>::type&) [42]
+                0.00    0.00      28/24405796     __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >::difference_type __gnu_cxx::operator-<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > > const&, __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > > const&) [81]
+                0.00    0.00      28/42710128     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_deallocate(unsigned char*, unsigned long) [64]
+                0.00    0.00      56/97623184     __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >::base() const [74]
+                0.00    0.00      56/85420254     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_get_Tp_allocator() [90]
+                0.00    0.00      28/451506693     operator new(unsigned long, void*) [40]
+-----------------------------------------------
+                0.00    0.00       2/2           sha256_stream_crypt(std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> >&, std::vector<unsigned char, std::allocator<unsigned char> > const&, unsigned long) [2]
+[112]    0.0    0.00    0.00       2         std::vector<unsigned char, std::allocator<unsigned char> >::resize(unsigned long) [112]
+                0.00    0.00       2/2           std::vector<unsigned char, std::allocator<unsigned char> >::_M_default_append(unsigned long) [113]
+                0.00    0.00       4/524724112     std::vector<unsigned char, std::allocator<unsigned char> >::size() const [32]
+-----------------------------------------------
+                0.00    0.00       2/2           std::vector<unsigned char, std::allocator<unsigned char> >::resize(unsigned long) [112]
+[113]    0.0    0.00    0.00       2         std::vector<unsigned char, std::allocator<unsigned char> >::_M_default_append(unsigned long) [113]
+                0.00    0.00       2/6101444     unsigned char* std::__uninitialized_default_n_a<unsigned char*, unsigned long, unsigned char>(unsigned char*, unsigned long, std::allocator<unsigned char>&) [52]
+                0.00    0.00       2/24405798     std::vector<unsigned char, std::allocator<unsigned char> >::_M_check_len(unsigned long, char const*) const [30]
+                0.00    0.00       4/48811600     std::vector<unsigned char, std::allocator<unsigned char> >::max_size() const [38]
+                0.00    0.00       2/48811594     std::vector<unsigned char, std::allocator<unsigned char> >::_S_relocate(unsigned char*, unsigned char*, unsigned char*, std::allocator<unsigned char>&) [37]
+                0.00    0.00       2/42710125     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_allocate(unsigned long) [57]
+                0.00    0.00       2/42710128     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_deallocate(unsigned char*, unsigned long) [64]
+                0.00    0.00       4/85420254     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_get_Tp_allocator() [90]
+                0.00    0.00       2/524724112     std::vector<unsigned char, std::allocator<unsigned char> >::size() const [32]
+-----------------------------------------------
+                0.00    0.00       1/1           unsigned char* std::copy<unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*) [106]
+[114]    0.0    0.00    0.00       1         unsigned char* std::__copy_move_a<false, unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*) [114]
+                0.00    0.00       1/12202885     unsigned char* std::__copy_move_a1<false, unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*) [89]
+                0.00    0.00       1/12202885     unsigned char* std::__niter_wrap<unsigned char*>(unsigned char* const&, unsigned char*) [102]
+                0.00    0.00       1/158637667     unsigned char* std::__niter_base<unsigned char*>(unsigned char*) [68]
+                0.00    0.00       2/2           unsigned char const* std::__niter_base<unsigned char const*>(unsigned char const*) [135]
+-----------------------------------------------
+                0.00    0.00       1/2           std::vector<unsigned char, std::allocator<unsigned char> >::vector<std::istreambuf_iterator<char, std::char_traits<char> >, void>(std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> >, std::allocator<unsigned char> const&) [8]
+                0.00    0.00       1/2           std::vector<unsigned char, std::allocator<unsigned char> >::vector(std::initializer_list<unsigned char>, std::allocator<unsigned char> const&) [67]
+[115]    0.0    0.00    0.00       2         std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_base(std::allocator<unsigned char> const&) [115]
+                0.00    0.00       2/18304328     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl::_Vector_impl(std::allocator<unsigned char> const&) [97]
+-----------------------------------------------
+                0.00    0.00       2/2           main [1]
+[116]    0.0    0.00    0.00       2         write_file(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) [116]
+                0.00    0.00       2/524724112     std::vector<unsigned char, std::allocator<unsigned char> >::size() const [32]
+                0.00    0.00       2/2           std::vector<unsigned char, std::allocator<unsigned char> >::data() const [133]
+-----------------------------------------------
+                0.00    0.00       2/2           std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_base() [99]
+[117]    0.0    0.00    0.00       2         std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl::_Vector_impl() [117]
+                0.00    0.00       2/18304330     std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl_data::_Vector_impl_data() [107]
+-----------------------------------------------
+                0.00    0.00       1/1           read_file(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [7]
+[118]    0.0    0.00    0.00       1         std::istreambuf_iterator<char, std::char_traits<char> >::istreambuf_iterator() [118]
+                0.00    0.00       1/97623057     std::char_traits<char>::eof() [88]
+-----------------------------------------------
+                0.00    0.00 24405768/24405768     unsigned char const* std::__niter_base<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >) [86]
+[125]    0.0    0.00    0.00 24405768         __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >::base() const [125]
+-----------------------------------------------
+                0.00    0.00 24405768/24405768     unsigned char* std::copy<__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*>(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*) [55]
+[126]    0.0    0.00    0.00 24405768         __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > > std::__miter_base<__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > > >(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >) [126]
+-----------------------------------------------
+                0.00    0.00       3/3           main [1]
+[127]    0.0    0.00    0.00       3         std::__new_allocator<char>::~__new_allocator() [127]
+-----------------------------------------------
+                0.00    0.00       3/3           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [78]
+[128]    0.0    0.00    0.00       3         void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [128]
+                0.00    0.00       3/3           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)::_Guard::_Guard(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) [130]
+                0.00    0.00       3/3           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)::_Guard::~_Guard() [131]
+-----------------------------------------------
+                0.00    0.00       3/3           std::char_traits<char>::length(char const*) [77]
+[129]    0.0    0.00    0.00       3         std::__is_constant_evaluated() [129]
+-----------------------------------------------
+                0.00    0.00       3/3           void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [128]
+[130]    0.0    0.00    0.00       3         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)::_Guard::_Guard(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) [130]
+-----------------------------------------------
+                0.00    0.00       3/3           void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [128]
+[131]    0.0    0.00    0.00       3         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)::_Guard::~_Guard() [131]
+-----------------------------------------------
+                0.00    0.00       2/2           std::vector<unsigned char, std::allocator<unsigned char> >::data() const [133]
+[132]    0.0    0.00    0.00       2         unsigned char* std::vector<unsigned char, std::allocator<unsigned char> >::_M_data_ptr<unsigned char>(unsigned char*) const [132]
+-----------------------------------------------
+                0.00    0.00       2/2           write_file(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) [116]
+[133]    0.0    0.00    0.00       2         std::vector<unsigned char, std::allocator<unsigned char> >::data() const [133]
+                0.00    0.00       2/2           unsigned char* std::vector<unsigned char, std::allocator<unsigned char> >::_M_data_ptr<unsigned char>(unsigned char*) const [132]
+-----------------------------------------------
+                0.00    0.00       2/2           unsigned char* std::copy<unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*) [106]
+[134]    0.0    0.00    0.00       2         unsigned char const* std::__miter_base<unsigned char const*>(unsigned char const*) [134]
+-----------------------------------------------
+                0.00    0.00       2/2           unsigned char* std::__copy_move_a<false, unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*) [114]
+[135]    0.0    0.00    0.00       2         unsigned char const* std::__niter_base<unsigned char const*>(unsigned char const*) [135]
+-----------------------------------------------
+                0.00    0.00       1/1           std::initializer_list<unsigned char>::end() const [110]
+[136]    0.0    0.00    0.00       1         std::initializer_list<unsigned char>::size() const [136]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2024 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+ [116] write_file(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) [117] std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl::_Vector_impl() [45] std::vector<unsigned char, std::allocator<unsigned char> >::~vector()
+   [4] sha256_transform(unsigned char const*, unsigned int*) [80] std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl::~_Vector_impl() [33] std::vector<unsigned char, std::allocator<unsigned char> >::operator[](unsigned long)
+   [2] sha256_stream_crypt(std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> >&, std::vector<unsigned char, std::allocator<unsigned char> > const&, unsigned long) [64] std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_deallocate(unsigned char*, unsigned long) [128] void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)
+  [26] ch(unsigned int, unsigned int, unsigned int) [59] std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_create_storage(unsigned long) [78] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&)
+  [13] ep0(unsigned int)     [107] std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl_data::_Vector_impl_data() [105] void std::_Construct<unsigned char>(unsigned char*)
+  [15] ep1(unsigned int)      [90] std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_get_Tp_allocator() [75] unsigned char* std::__fill_n_a<unsigned char*, unsigned long, unsigned char>(unsigned char*, unsigned long, unsigned char const&, std::random_access_iterator_tag)
+  [35] maj(unsigned int, unsigned int, unsigned int) [115] std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_base(std::allocator<unsigned char> const&) [108] unsigned char* std::__addressof<unsigned char>(unsigned char&)
+  [10] rotr(unsigned int, unsigned int) [99] std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_base() [126] __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > > std::__miter_base<__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > > >(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >)
+  [21] sig0(unsigned int)     [54] std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_base(unsigned long, std::allocator<unsigned char> const&) [134] unsigned char const* std::__miter_base<unsigned char const*>(unsigned char const*)
+  [22] sig1(unsigned int)     [61] std::_Vector_base<unsigned char, std::allocator<unsigned char> >::~_Vector_base() [135] unsigned char const* std::__niter_base<unsigned char const*>(unsigned char const*)
+   [3] sha256(std::vector<unsigned char, std::allocator<unsigned char> > const&) [127] std::__new_allocator<char>::~__new_allocator() [86] unsigned char const* std::__niter_base<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >)
+   [7] read_file(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [91] std::__new_allocator<unsigned char>::deallocate(unsigned char*, unsigned long) [68] unsigned char* std::__niter_base<unsigned char*>(unsigned char*)
+  [93] __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >::__normal_iterator(unsigned char const* const&) [63] std::__new_allocator<unsigned char>::allocate(unsigned long, void const*) [102] unsigned char* std::__niter_wrap<unsigned char*>(unsigned char* const&, unsigned char*)
+  [25] __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >::__normal_iterator(unsigned char* const&) [84] std::__new_allocator<unsigned char>::~__new_allocator() [39] unsigned char* std::__relocate_a<unsigned char*, unsigned char*, std::allocator<unsigned char> >(unsigned char*, unsigned char*, unsigned char*, std::allocator<unsigned char>&)
+  [81] __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >::difference_type __gnu_cxx::operator-<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > > const&, __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > > const&) [20] std::istreambuf_iterator<char, std::char_traits<char> >::_S_is_eof(int) [56] unsigned char* std::__copy_move_a<false, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*>(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*)
+ [125] __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >::base() const [118] std::istreambuf_iterator<char, std::char_traits<char> >::istreambuf_iterator() [114] unsigned char* std::__copy_move_a<false, unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*)
+  [74] __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >::base() const [95] std::istreambuf_iterator<char, std::char_traits<char> >::istreambuf_iterator(std::istream&) [89] unsigned char* std::__copy_move_a1<false, unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*)
+  [34] __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >::operator*() const [47] std::istreambuf_iterator<char, std::char_traits<char> >::operator++() [98] unsigned char* std::__copy_move_a2<false, unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*)
+  [23] __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >::operator-(long) const [53] unsigned char* std::__uninitialized_copy<true>::__uninit_copy<__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*>(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*) [66] std::enable_if<std::__is_bitwise_relocatable<unsigned char, void>::value, unsigned char*>::type std::__relocate_a_1<unsigned char, unsigned char>(unsigned char*, unsigned char*, unsigned char*, std::allocator<unsigned char>&)
+  [83] std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_get_Tp_allocator() const [71] unsigned char* std::__uninitialized_copy<true>::__uninit_copy<unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*) [103] std::__size_to_integer(unsigned long)
+ [110] std::initializer_list<unsigned char>::end() const [50] unsigned char* std::__uninitialized_default_n_1<true>::__uninit_default_n<unsigned char*, unsigned long>(unsigned char*, unsigned long) [49] unsigned char* std::uninitialized_copy<__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*>(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*)
+ [136] std::initializer_list<unsigned char>::size() const [43] std::vector<unsigned char, std::allocator<unsigned char> >::_S_max_size(std::allocator<unsigned char> const&) [72] unsigned char* std::uninitialized_copy<unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*)
+ [109] std::initializer_list<unsigned char>::begin() const [37] std::vector<unsigned char, std::allocator<unsigned char> >::_S_relocate(unsigned char*, unsigned char*, unsigned char*, std::allocator<unsigned char>&) [46] unsigned char* std::__uninitialized_copy_a<__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*, unsigned char>(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*, std::allocator<unsigned char>&)
+  [16] std::istreambuf_iterator<char, std::char_traits<char> >::equal(std::istreambuf_iterator<char, std::char_traits<char> > const&) const [18] unsigned char& std::vector<unsigned char, std::allocator<unsigned char> >::emplace_back<char>(char&&) [73] unsigned char* std::__uninitialized_copy_a<unsigned char const*, unsigned char*, unsigned char>(unsigned char const*, unsigned char const*, unsigned char*, std::allocator<unsigned char>&)
+  [19] std::istreambuf_iterator<char, std::char_traits<char> >::_M_get() const [6] unsigned char& std::vector<unsigned char, std::allocator<unsigned char> >::emplace_back<unsigned char>(unsigned char&&) [129] std::__is_constant_evaluated()
+  [17] std::istreambuf_iterator<char, std::char_traits<char> >::_M_at_eof() const [113] std::vector<unsigned char, std::allocator<unsigned char> >::_M_default_append(unsigned long) [51] unsigned char* std::__uninitialized_default_n<unsigned char*, unsigned long>(unsigned char*, unsigned long)
+  [27] std::istreambuf_iterator<char, std::char_traits<char> >::operator*() const [111] void std::vector<unsigned char, std::allocator<unsigned char> >::_M_realloc_insert<char>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, char&&) [52] unsigned char* std::__uninitialized_default_n_a<unsigned char*, unsigned long, unsigned char>(unsigned char*, unsigned long, std::allocator<unsigned char>&)
+ [132] unsigned char* std::vector<unsigned char, std::allocator<unsigned char> >::_M_data_ptr<unsigned char>(unsigned char*) const [12] void std::vector<unsigned char, std::allocator<unsigned char> >::_M_realloc_insert<unsigned char>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char&&) [85] unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&)
+  [30] std::vector<unsigned char, std::allocator<unsigned char> >::_M_check_len(unsigned long, char const*) const [69] std::vector<unsigned char, std::allocator<unsigned char> >::_S_check_init_len(unsigned long, std::allocator<unsigned char> const&) [65] unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&)
+  [94] std::vector<unsigned char, std::allocator<unsigned char> >::end() const [70] void std::vector<unsigned char, std::allocator<unsigned char> >::_M_range_initialize<unsigned char const*>(unsigned char const*, unsigned char const*, std::forward_iterator_tag) [55] unsigned char* std::copy<__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*>(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*)
+ [133] std::vector<unsigned char, std::allocator<unsigned char> >::data() const [9] void std::vector<unsigned char, std::allocator<unsigned char> >::_M_range_initialize<std::istreambuf_iterator<char, std::char_traits<char> > >(std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> >, std::input_iterator_tag) [106] unsigned char* std::copy<unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*)
+  [32] std::vector<unsigned char, std::allocator<unsigned char> >::size() const [48] std::vector<unsigned char, std::allocator<unsigned char> >::_M_default_initialize(unsigned long) [41] std::remove_reference<unsigned char&>::type&& std::move<unsigned char&>(unsigned char&)
+  [96] std::vector<unsigned char, std::allocator<unsigned char> >::begin() const [24] std::vector<unsigned char, std::allocator<unsigned char> >::end() [62] unsigned char* std::fill_n<unsigned char*, unsigned long, unsigned char>(unsigned char*, unsigned long, unsigned char const&)
+  [38] std::vector<unsigned char, std::allocator<unsigned char> >::max_size() const [11] std::vector<unsigned char, std::allocator<unsigned char> >::back() [42] char&& std::forward<char>(std::remove_reference<char>::type&)
+  [58] std::vector<unsigned char, std::allocator<unsigned char> >::operator[](unsigned long) const [44] std::vector<unsigned char, std::allocator<unsigned char> >::begin() [28] unsigned char&& std::forward<unsigned char>(std::remove_reference<unsigned char>::type&)
+ [101] unsigned char* std::__copy_move<false, true, std::random_access_iterator_tag>::__copy_m<unsigned char const, unsigned char>(unsigned char const*, unsigned char const*, unsigned char*) [104] std::vector<unsigned char, std::allocator<unsigned char> >::clear() [79] void std::_Destroy<unsigned char*>(unsigned char*, unsigned char*)
+  [29] std::char_traits<char>::eq_int_type(int const&, int const&) [112] std::vector<unsigned char, std::allocator<unsigned char> >::resize(unsigned long) [76] void std::__fill_a<unsigned char*, unsigned char>(unsigned char*, unsigned char*, unsigned char const&)
+  [60] std::char_traits<char>::to_char_type(int const&) [5] std::vector<unsigned char, std::allocator<unsigned char> >::push_back(unsigned char&&) [82] __gnu_cxx::__enable_if<std::__is_byte<unsigned char>::__value, void>::__type std::__fill_a1<unsigned char>(unsigned char*, unsigned char*, unsigned char const&)
+  [88] std::char_traits<char>::eof() [31] std::vector<unsigned char, std::allocator<unsigned char> >::vector(std::vector<unsigned char, std::allocator<unsigned char> > const&) [14] bool std::operator!=<char, std::char_traits<char> >(std::istreambuf_iterator<char, std::char_traits<char> > const&, std::istreambuf_iterator<char, std::char_traits<char> > const&)
+  [77] std::char_traits<char>::length(char const*) [67] std::vector<unsigned char, std::allocator<unsigned char> >::vector(std::initializer_list<unsigned char>, std::allocator<unsigned char> const&) [130] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)::_Guard::_Guard(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*)
+  [87] void std::_Destroy_aux<true>::__destroy<unsigned char*>(unsigned char*, unsigned char*) [36] std::vector<unsigned char, std::allocator<unsigned char> >::vector(unsigned long, std::allocator<unsigned char> const&) [131] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)::_Guard::~_Guard()
+  [57] std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_allocate(unsigned long) [8] std::vector<unsigned char, std::allocator<unsigned char> >::vector<std::istreambuf_iterator<char, std::char_traits<char> >, void>(std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> >, std::allocator<unsigned char> const&) [40] operator new(unsigned long, void*)
+  [97] std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl::_Vector_impl(std::allocator<unsigned char> const&) [100] std::vector<unsigned char, std::allocator<unsigned char> >::vector() [92] _init
