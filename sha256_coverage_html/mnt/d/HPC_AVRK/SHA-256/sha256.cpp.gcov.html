@@ -1,0 +1,222 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - coverage.info - mnt/d/HPC_AVRK/SHA-256/sha256.cpp</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">/mnt/d/HPC_AVRK/SHA-256</a> - sha256.cpp<span style="font-size: 80%;"> (source / <a href="sha256.cpp.func-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only">Hit</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">coverage.info</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">77</td>
+            <td class="headerCovTableEntry">77</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test Date:</td>
+            <td class="headerValue">2026-02-07 10:26:10</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">13</td>
+            <td class="headerCovTableEntry">13</td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading">            Line data    Source code</pre>
+<pre class="source">
+<span id="L1"><span class="lineNum">       1</span>              : #include &lt;iostream&gt;</span>
+<span id="L2"><span class="lineNum">       2</span>              : #include &lt;vector&gt;</span>
+<span id="L3"><span class="lineNum">       3</span>              : #include &lt;cstring&gt;</span>
+<span id="L4"><span class="lineNum">       4</span>              : #include &lt;cstdint&gt;</span>
+<span id="L5"><span class="lineNum">       5</span>              : #include&lt;fstream&gt;</span>
+<span id="L6"><span class="lineNum">       6</span>              : #include&lt;string&gt;</span>
+<span id="L7"><span class="lineNum">       7</span>              : using u8 = uint8_t;</span>
+<span id="L8"><span class="lineNum">       8</span>              : using u32  = uint32_t;</span>
+<span id="L9"><span class="lineNum">       9</span>              : using u64  = uint64_t;</span>
+<span id="L10"><span class="lineNum">      10</span>              : using namespace std;</span>
+<span id="L11"><span class="lineNum">      11</span>              : </span>
+<span id="L12"><span class="lineNum">      12</span>              : /* ================= SHA256 CONSTANTS ================= */</span>
+<span id="L13"><span class="lineNum">      13</span>              : </span>
+<span id="L14"><span class="lineNum">      14</span>              : static const u32 K[64] = {</span>
+<span id="L15"><span class="lineNum">      15</span>              : 0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,</span>
+<span id="L16"><span class="lineNum">      16</span>              : 0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,</span>
+<span id="L17"><span class="lineNum">      17</span>              : 0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,</span>
+<span id="L18"><span class="lineNum">      18</span>              : 0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,</span>
+<span id="L19"><span class="lineNum">      19</span>              : 0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,</span>
+<span id="L20"><span class="lineNum">      20</span>              : 0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,</span>
+<span id="L21"><span class="lineNum">      21</span>              : 0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,</span>
+<span id="L22"><span class="lineNum">      22</span>              : 0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2</span>
+<span id="L23"><span class="lineNum">      23</span>              : };</span>
+<span id="L24"><span class="lineNum">      24</span>              : </span>
+<span id="L25"><span class="lineNum">      25</span>              : /* ================= SHA256 HELPERS ================= */</span>
+<span id="L26"><span class="lineNum">      26</span>              : </span>
+<span id="L27"><span class="lineNum">      27</span> <span class="tlaGNC tlaBgGNC">  3514430592 : inline u32 rotr(u32 x, u32 n){ return (x &gt;&gt; n) | (x &lt;&lt; (32 - n)); }</span></span>
+<span id="L28"><span class="lineNum">      28</span> <span class="tlaGNC">   390492288 : inline u32 ch(u32 x, u32 y, u32 z){ return (x &amp; y) ^ (~x &amp; z); }</span></span>
+<span id="L29"><span class="lineNum">      29</span> <span class="tlaGNC">   390492288 : inline u32 maj(u32 x, u32 y, u32 z){ return (x &amp; y) ^ (x &amp; z) ^ (y &amp; z); }</span></span>
+<span id="L30"><span class="lineNum">      30</span> <span class="tlaGNC">   390492288 : inline u32 ep0(u32 x){ return rotr(x,2) ^ rotr(x,13) ^ rotr(x,22); }</span></span>
+<span id="L31"><span class="lineNum">      31</span> <span class="tlaGNC">   390492288 : inline u32 ep1(u32 x){ return rotr(x,6) ^ rotr(x,11) ^ rotr(x,25); }</span></span>
+<span id="L32"><span class="lineNum">      32</span> <span class="tlaGNC">   292869216 : inline u32 sig0(u32 x){ return rotr(x,7) ^ rotr(x,18) ^ (x &gt;&gt; 3); }</span></span>
+<span id="L33"><span class="lineNum">      33</span> <span class="tlaGNC">   292869216 : inline u32 sig1(u32 x){ return rotr(x,17) ^ rotr(x,19) ^ (x &gt;&gt; 10); }</span></span>
+<span id="L34"><span class="lineNum">      34</span>              : </span>
+<span id="L35"><span class="lineNum">      35</span>              : /* ================= SHA256 CORE ================= */</span>
+<span id="L36"><span class="lineNum">      36</span>              : </span>
+<span id="L37"><span class="lineNum">      37</span> <span class="tlaGNC">     6101442 : void sha256_transform(const u8 data[64], u32 state[8]) {</span></span>
+<span id="L38"><span class="lineNum">      38</span>              :     u32 w[64];</span>
+<span id="L39"><span class="lineNum">      39</span>              : </span>
+<span id="L40"><span class="lineNum">      40</span> <span class="tlaGNC">   103724514 :     for(int i=0;i&lt;16;i++)</span></span>
+<span id="L41"><span class="lineNum">      41</span> <span class="tlaGNC">    97623072 :         w[i] = (data[i*4]&lt;&lt;24)|(data[i*4+1]&lt;&lt;16)|</span></span>
+<span id="L42"><span class="lineNum">      42</span> <span class="tlaGNC">    97623072 :                (data[i*4+2]&lt;&lt;8)|(data[i*4+3]);</span></span>
+<span id="L43"><span class="lineNum">      43</span>              : </span>
+<span id="L44"><span class="lineNum">      44</span> <span class="tlaGNC">   298970658 :     for(int i=16;i&lt;64;i++)</span></span>
+<span id="L45"><span class="lineNum">      45</span> <span class="tlaGNC">   292869216 :         w[i] = sig1(w[i-2]) + w[i-7] + sig0(w[i-15]) + w[i-16];</span></span>
+<span id="L46"><span class="lineNum">      46</span>              : </span>
+<span id="L47"><span class="lineNum">      47</span> <span class="tlaGNC">     6101442 :     u32 a=state[0], b=state[1], c=state[2], d=state[3];</span></span>
+<span id="L48"><span class="lineNum">      48</span> <span class="tlaGNC">     6101442 :     u32 e=state[4], f=state[5], g=state[6], h=state[7];</span></span>
+<span id="L49"><span class="lineNum">      49</span>              : </span>
+<span id="L50"><span class="lineNum">      50</span> <span class="tlaGNC">   396593730 :     for(int i=0;i&lt;64;i++){</span></span>
+<span id="L51"><span class="lineNum">      51</span> <span class="tlaGNC">   390492288 :         u32 t1 = h + ep1(e) + ch(e,f,g) + K[i] + w[i];</span></span>
+<span id="L52"><span class="lineNum">      52</span> <span class="tlaGNC">   390492288 :         u32 t2 = ep0(a) + maj(a,b,c);</span></span>
+<span id="L53"><span class="lineNum">      53</span> <span class="tlaGNC">   390492288 :         h=g; g=f; f=e;</span></span>
+<span id="L54"><span class="lineNum">      54</span> <span class="tlaGNC">   390492288 :         e=d + t1;</span></span>
+<span id="L55"><span class="lineNum">      55</span> <span class="tlaGNC">   390492288 :         d=c; c=b; b=a;</span></span>
+<span id="L56"><span class="lineNum">      56</span> <span class="tlaGNC">   390492288 :         a=t1 + t2;</span></span>
+<span id="L57"><span class="lineNum">      57</span>              :     }</span>
+<span id="L58"><span class="lineNum">      58</span>              : </span>
+<span id="L59"><span class="lineNum">      59</span> <span class="tlaGNC">     6101442 :     state[0]+=a; state[1]+=b; state[2]+=c; state[3]+=d;</span></span>
+<span id="L60"><span class="lineNum">      60</span> <span class="tlaGNC">     6101442 :     state[4]+=e; state[5]+=f; state[6]+=g; state[7]+=h;</span></span>
+<span id="L61"><span class="lineNum">      61</span> <span class="tlaGNC">     6101442 : }</span></span>
+<span id="L62"><span class="lineNum">      62</span>              : </span>
+<span id="L63"><span class="lineNum">      63</span> <span class="tlaGNC">     6101442 : vector&lt;u8&gt; sha256(const vector&lt;u8&gt;&amp; input) {</span></span>
+<span id="L64"><span class="lineNum">      64</span> <span class="tlaGNC">     6101442 :     u32 state[8] = {</span></span>
+<span id="L65"><span class="lineNum">      65</span>              :         0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,</span>
+<span id="L66"><span class="lineNum">      66</span>              :         0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19</span>
+<span id="L67"><span class="lineNum">      67</span>              :     };</span>
+<span id="L68"><span class="lineNum">      68</span>              : </span>
+<span id="L69"><span class="lineNum">      69</span> <span class="tlaGNC">     6101442 :     vector&lt;u8&gt; data = input;</span></span>
+<span id="L70"><span class="lineNum">      70</span> <span class="tlaGNC">     6101442 :     u64 bitlen = data.size() * 8;</span></span>
+<span id="L71"><span class="lineNum">      71</span>              : </span>
+<span id="L72"><span class="lineNum">      72</span> <span class="tlaGNC">     6101442 :     data.push_back(0x80);</span></span>
+<span id="L73"><span class="lineNum">      73</span> <span class="tlaGNC">   201347586 :     while((data.size() % 64) != 56)</span></span>
+<span id="L74"><span class="lineNum">      74</span> <span class="tlaGNC">   195246144 :         data.push_back(0x00);</span></span>
+<span id="L75"><span class="lineNum">      75</span>              : </span>
+<span id="L76"><span class="lineNum">      76</span> <span class="tlaGNC">    54912978 :     for(int i=7;i&gt;=0;i--)</span></span>
+<span id="L77"><span class="lineNum">      77</span> <span class="tlaGNC">    48811536 :         data.push_back((bitlen&gt;&gt;(i*8))&amp;0xff);</span></span>
+<span id="L78"><span class="lineNum">      78</span>              : </span>
+<span id="L79"><span class="lineNum">      79</span> <span class="tlaGNC">    12202884 :     for(size_t i=0;i&lt;data.size(); i+=64)</span></span>
+<span id="L80"><span class="lineNum">      80</span> <span class="tlaGNC">     6101442 :         sha256_transform(&amp;data[i], state);</span></span>
+<span id="L81"><span class="lineNum">      81</span>              : </span>
+<span id="L82"><span class="lineNum">      82</span> <span class="tlaGNC">     6101442 :     vector&lt;u8&gt; hash(32);</span></span>
+<span id="L83"><span class="lineNum">      83</span> <span class="tlaGNC">    54912978 :     for(int i=0;i&lt;8;i++){</span></span>
+<span id="L84"><span class="lineNum">      84</span> <span class="tlaGNC">    48811536 :         hash[i*4]=(state[i]&gt;&gt;24)&amp;0xff;</span></span>
+<span id="L85"><span class="lineNum">      85</span> <span class="tlaGNC">    48811536 :         hash[i*4+1]=(state[i]&gt;&gt;16)&amp;0xff;</span></span>
+<span id="L86"><span class="lineNum">      86</span> <span class="tlaGNC">    48811536 :         hash[i*4+2]=(state[i]&gt;&gt;8)&amp;0xff;</span></span>
+<span id="L87"><span class="lineNum">      87</span> <span class="tlaGNC">    48811536 :         hash[i*4+3]=state[i]&amp;0xff;</span></span>
+<span id="L88"><span class="lineNum">      88</span>              :     }</span>
+<span id="L89"><span class="lineNum">      89</span> <span class="tlaGNC">    12202884 :     return hash;</span></span>
+<span id="L90"><span class="lineNum">      90</span> <span class="tlaGNC">     6101442 : }</span></span>
+<span id="L91"><span class="lineNum">      91</span>              : </span>
+<span id="L92"><span class="lineNum">      92</span>              : /* ================= STREAM CIPHER USING SHA256 ================= */</span>
+<span id="L93"><span class="lineNum">      93</span>              : </span>
+<span id="L94"><span class="lineNum">      94</span> <span class="tlaGNC">           2 : void sha256_stream_crypt(const vector&lt;u8&gt;&amp; input,</span></span>
+<span id="L95"><span class="lineNum">      95</span>              :                          vector&lt;u8&gt;&amp; output,</span>
+<span id="L96"><span class="lineNum">      96</span>              :                          const vector&lt;u8&gt;&amp; key,</span>
+<span id="L97"><span class="lineNum">      97</span>              :                          u64 nonce)</span>
+<span id="L98"><span class="lineNum">      98</span>              : {</span>
+<span id="L99"><span class="lineNum">      99</span> <span class="tlaGNC">           2 :     size_t blocks = (input.size() + 31) / 32;</span></span>
+<span id="L100"><span class="lineNum">     100</span> <span class="tlaGNC">           2 :     output.resize(input.size());</span></span>
+<span id="L101"><span class="lineNum">     101</span>              : </span>
+<span id="L102"><span class="lineNum">     102</span> <span class="tlaGNC">     6101444 :     for(size_t i = 0; i &lt; blocks; ++i) {   // &lt;--- PARALLELIZE HERE</span></span>
+<span id="L103"><span class="lineNum">     103</span>              : </span>
+<span id="L104"><span class="lineNum">     104</span> <span class="tlaGNC">     6101442 :         vector&lt;u8&gt; seed = key;</span></span>
+<span id="L105"><span class="lineNum">     105</span>              : </span>
+<span id="L106"><span class="lineNum">     106</span> <span class="tlaGNC">    54912978 :         for(int j=7;j&gt;=0;j--)</span></span>
+<span id="L107"><span class="lineNum">     107</span> <span class="tlaGNC">    48811536 :             seed.push_back((nonce&gt;&gt;(j*8))&amp;0xff);</span></span>
+<span id="L108"><span class="lineNum">     108</span>              : </span>
+<span id="L109"><span class="lineNum">     109</span> <span class="tlaGNC">    54912978 :         for(int j=7;j&gt;=0;j--)</span></span>
+<span id="L110"><span class="lineNum">     110</span> <span class="tlaGNC">    48811536 :             seed.push_back((i&gt;&gt;(j*8))&amp;0xff);</span></span>
+<span id="L111"><span class="lineNum">     111</span>              : </span>
+<span id="L112"><span class="lineNum">     112</span> <span class="tlaGNC">     6101442 :         vector&lt;u8&gt; ks = sha256(seed);</span></span>
+<span id="L113"><span class="lineNum">     113</span>              : </span>
+<span id="L114"><span class="lineNum">     114</span> <span class="tlaGNC">   201347552 :         for(int j=0;j&lt;32 &amp;&amp; (i*32+j)&lt;input.size();j++)</span></span>
+<span id="L115"><span class="lineNum">     115</span> <span class="tlaGNC">   195246110 :             output[i*32+j] = input[i*32+j] ^ ks[j];</span></span>
+<span id="L116"><span class="lineNum">     116</span> <span class="tlaGNC">     6101442 :     }</span></span>
+<span id="L117"><span class="lineNum">     117</span> <span class="tlaGNC">           2 : }</span></span>
+<span id="L118"><span class="lineNum">     118</span>              : </span>
+<span id="L119"><span class="lineNum">     119</span> <span class="tlaGNC">           1 : vector&lt;u8&gt; read_file(const string&amp; filename) {</span></span>
+<span id="L120"><span class="lineNum">     120</span> <span class="tlaGNC">           1 :     ifstream file(filename, ios::binary);</span></span>
+<span id="L121"><span class="lineNum">     121</span>              :     return vector&lt;u8&gt;((istreambuf_iterator&lt;char&gt;(file)),</span>
+<span id="L122"><span class="lineNum">     122</span> <span class="tlaGNC">           2 :                               istreambuf_iterator&lt;char&gt;());</span></span>
+<span id="L123"><span class="lineNum">     123</span> <span class="tlaGNC">           1 : }</span></span>
+<span id="L124"><span class="lineNum">     124</span>              : </span>
+<span id="L125"><span class="lineNum">     125</span> <span class="tlaGNC">           2 : void write_file(const string&amp; filename, const vector&lt;u8&gt;&amp; data) {</span></span>
+<span id="L126"><span class="lineNum">     126</span> <span class="tlaGNC">           2 :     ofstream file(filename, ios::binary);</span></span>
+<span id="L127"><span class="lineNum">     127</span> <span class="tlaGNC">           2 :     file.write(reinterpret_cast&lt;const char*&gt;(data.data()), data.size());</span></span>
+<span id="L128"><span class="lineNum">     128</span> <span class="tlaGNC">           2 : }</span></span>
+<span id="L129"><span class="lineNum">     129</span>              : </span>
+<span id="L130"><span class="lineNum">     130</span>              : </span>
+<span id="L131"><span class="lineNum">     131</span> <span class="tlaGNC">           1 : int main() {</span></span>
+<span id="L132"><span class="lineNum">     132</span> <span class="tlaGNC">           1 :     vector&lt;u8&gt; input = read_file(&quot;C prog.pdf&quot;);  </span></span>
+<span id="L133"><span class="lineNum">     133</span> <span class="tlaGNC">           1 :     vector&lt;u8&gt; encrypted, decrypted;</span></span>
+<span id="L134"><span class="lineNum">     134</span>              : </span>
+<span id="L135"><span class="lineNum">     135</span> <span class="tlaGNC">           2 :     vector&lt;u8&gt; key = {'H','P','C','_','K','E','Y'};</span></span>
+<span id="L136"><span class="lineNum">     136</span> <span class="tlaGNC">           1 :     u64 nonce = 12345;</span></span>
+<span id="L137"><span class="lineNum">     137</span>              :  </span>
+<span id="L138"><span class="lineNum">     138</span> <span class="tlaGNC">           1 :     sha256_stream_crypt(input, encrypted, key, nonce);</span></span>
+<span id="L139"><span class="lineNum">     139</span> <span class="tlaGNC">           1 :     write_file(&quot;encrypted.bin&quot;, encrypted);</span></span>
+<span id="L140"><span class="lineNum">     140</span>              : </span>
+<span id="L141"><span class="lineNum">     141</span> <span class="tlaGNC">           1 :     sha256_stream_crypt(encrypted, decrypted, key, nonce);</span></span>
+<span id="L142"><span class="lineNum">     142</span> <span class="tlaGNC">           1 :     write_file(&quot;GProf_decrypted.pdf&quot;, decrypted);</span></span>
+<span id="L143"><span class="lineNum">     143</span>              : </span>
+<span id="L144"><span class="lineNum">     144</span> <span class="tlaGNC">           1 :     std::cout &lt;&lt; &quot;Done. Check decrypted\n&quot;;</span></span>
+<span id="L145"><span class="lineNum">     145</span> <span class="tlaGNC">           1 : }</span></span>
+<span id="L146"><span class="lineNum">     146</span>              : </span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.0-1</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

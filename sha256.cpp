@@ -4,10 +4,10 @@
 #include <cstdint>
 #include<fstream>
 #include<string>
-
-using byte = uint8_t;
+using u8 = uint8_t;
 using u32  = uint32_t;
 using u64  = uint64_t;
+using namespace std;
 
 /* ================= SHA256 CONSTANTS ================= */
 
@@ -34,7 +34,7 @@ inline u32 sig1(u32 x){ return rotr(x,17) ^ rotr(x,19) ^ (x >> 10); }
 
 /* ================= SHA256 CORE ================= */
 
-void sha256_transform(const byte data[64], u32 state[8]) {
+void sha256_transform(const u8 data[64], u32 state[8]) {
     u32 w[64];
 
     for(int i=0;i<16;i++)
@@ -60,13 +60,13 @@ void sha256_transform(const byte data[64], u32 state[8]) {
     state[4]+=e; state[5]+=f; state[6]+=g; state[7]+=h;
 }
 
-std::vector<byte> sha256(const std::vector<byte>& input) {
+vector<u8> sha256(const vector<u8>& input) {
     u32 state[8] = {
         0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,
         0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19
     };
 
-    std::vector<byte> data = input;
+    vector<u8> data = input;
     u64 bitlen = data.size() * 8;
 
     data.push_back(0x80);
@@ -79,7 +79,7 @@ std::vector<byte> sha256(const std::vector<byte>& input) {
     for(size_t i=0;i<data.size(); i+=64)
         sha256_transform(&data[i], state);
 
-    std::vector<byte> hash(32);
+    vector<u8> hash(32);
     for(int i=0;i<8;i++){
         hash[i*4]=(state[i]>>24)&0xff;
         hash[i*4+1]=(state[i]>>16)&0xff;
@@ -91,9 +91,9 @@ std::vector<byte> sha256(const std::vector<byte>& input) {
 
 /* ================= STREAM CIPHER USING SHA256 ================= */
 
-void sha256_stream_crypt(const std::vector<byte>& input,
-                         std::vector<byte>& output,
-                         const std::vector<byte>& key,
+void sha256_stream_crypt(const vector<u8>& input,
+                         vector<u8>& output,
+                         const vector<u8>& key,
                          u64 nonce)
 {
     size_t blocks = (input.size() + 31) / 32;
@@ -101,7 +101,7 @@ void sha256_stream_crypt(const std::vector<byte>& input,
 
     for(size_t i = 0; i < blocks; ++i) {   // <--- PARALLELIZE HERE
 
-        std::vector<byte> seed = key;
+        vector<u8> seed = key;
 
         for(int j=7;j>=0;j--)
             seed.push_back((nonce>>(j*8))&0xff);
@@ -109,37 +109,37 @@ void sha256_stream_crypt(const std::vector<byte>& input,
         for(int j=7;j>=0;j--)
             seed.push_back((i>>(j*8))&0xff);
 
-        std::vector<byte> ks = sha256(seed);
+        vector<u8> ks = sha256(seed);
 
         for(int j=0;j<32 && (i*32+j)<input.size();j++)
             output[i*32+j] = input[i*32+j] ^ ks[j];
     }
 }
 
-std::vector<byte> read_file(const std::string& filename) {
-    std::ifstream file(filename, std::ios::binary);
-    return std::vector<byte>((std::istreambuf_iterator<char>(file)),
-                              std::istreambuf_iterator<char>());
+vector<u8> read_file(const string& filename) {
+    ifstream file(filename, ios::binary);
+    return vector<u8>((istreambuf_iterator<char>(file)),
+                              istreambuf_iterator<char>());
 }
 
-void write_file(const std::string& filename, const std::vector<byte>& data) {
-    std::ofstream file(filename, std::ios::binary);
+void write_file(const string& filename, const vector<u8>& data) {
+    ofstream file(filename, ios::binary);
     file.write(reinterpret_cast<const char*>(data.data()), data.size());
 }
 
 
 int main() {
-    std::vector<byte> input = read_file("sample_text.txt");  
-    std::vector<byte> encrypted, decrypted;
+    vector<u8> input = read_file("C prog.pdf");  
+    vector<u8> encrypted, decrypted;
 
-    std::vector<byte> key = {'H','P','C','_','K','E','Y'};
+    vector<u8> key = {'H','P','C','_','K','E','Y'};
     u64 nonce = 12345;
-
+ 
     sha256_stream_crypt(input, encrypted, key, nonce);
     write_file("encrypted.bin", encrypted);
 
     sha256_stream_crypt(encrypted, decrypted, key, nonce);
-    write_file("Decrypted_text.txt", decrypted);
+    write_file("GProf_decrypted.pdf", decrypted);
 
     std::cout << "Done. Check decrypted\n";
 }

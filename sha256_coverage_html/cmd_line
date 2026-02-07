@@ -1,0 +1,1 @@
+genhtml coverage.info --output-directory sha256_coverage_html
